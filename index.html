@@ -87,7 +87,7 @@ var svg = d3.select("body").append("svg")
 
 queue()
     .defer(d3.json, "/d/4686432/world-110m.json")
-    .defer(d3.json, "places.json")
+    .defer(d3.json, "https://github.com/tlecardo/world/blob/main/places.json")
     .await(ready);
 
 function ready(error, world, places) {
