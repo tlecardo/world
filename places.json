@@ -6,11 +6,11 @@
                                       "latitude": 48.86186390500471, "longitude": 2.3432102861328286 }, 
                                       "geometry": { "type": "Point", "coordinates": [ 2.3432102861328286, 48.86186390500471 ] } },
    
-{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
-                                      "name": "Paris", "nameascii": "Paris", "adm0name": "France", "adm0_a3": "France", 
-                                      "adm1name": "Ile de France", "iso_a2": "FR", "note": null, 
-                                      "latitude": 5.7357819, "longitude": 45.1875602 }, 
-                                      "geometry": { "type": "Point", "coordinates": [ 45.1875602, 5.7357819 ] } },
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
+                                      "name": "Grenoble", "nameascii": "Grenoble", "adm0name": "France", "adm0_a3": "France", 
+                                      "adm1name": "AuRA", "iso_a2": "FR", "note": null, 
+                                      "latitude": 45.1875602, "longitude": 5.7357819 }, 
+                                      "geometry": { "type": "Point", "coordinates": [  5.7357819, 45.1875602 ] } },
 
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
                                       "name": "Londres", "nameascii": "Londres", "adm0name": "Royaume-Uni", "adm0_a3": "Royaume-Uni", 
