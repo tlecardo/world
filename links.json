@@ -21,5 +21,6 @@
 { "type": "Feature", "properties": { "sourcename": "Montréal", "targetname": "Niagara-Falls" }, 
                       "geometry": { "type": "LineString", "coordinates": [ [ -73.60579102612303, 45.50594902202338], [ -79.0639039, 43.1065603] ] } },   
   
-
+{ "type": "Feature", "properties": { "sourcename": "Montréal", "targetname": "New-York" }, 
+                      "geometry": { "type": "LineString", "coordinates": [ [ -73.60579102612303, 45.50594902202338], [ -74.0060152, 40.7127281] ] } }
 ]}
