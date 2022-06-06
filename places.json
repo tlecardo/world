@@ -1,35 +1,38 @@
 {"type": "FeatureCollection","features": [
   
- { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
                                       "name": "Paris", "nameascii": "Paris", "adm0name": "France", "adm0_a3": "France", 
                                       "adm1name": "Ile de France", "iso_a2": "FR", "note": null, 
                                       "latitude": 48.86186390500471, "longitude": 2.3432102861328286 }, 
                                       "geometry": { "type": "Point", "coordinates": [ 2.3432102861328286, 48.86186390500471 ] } },
    
- { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
+                                      "name": "Paris", "nameascii": "Paris", "adm0name": "France", "adm0_a3": "France", 
+                                      "adm1name": "Ile de France", "iso_a2": "FR", "note": null, 
+                                      "latitude": 5.7357819, "longitude": 45.1875602 }, 
+                                      "geometry": { "type": "Point", "coordinates": [ 45.1875602, 5.7357819 ] } },
+
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
                                       "name": "Londres", "nameascii": "Londres", "adm0name": "Royaume-Uni", "adm0_a3": "Royaume-Uni", 
                                       "adm1name": "Grand Londres", "iso_a2": "UK", "note": null, 
                                       "latitude": -0.10802834606931988, "longitude": 51.51412149217436 }, 
                        "geometry": { "type": "Point", "coordinates": [ -0.10802834606931988, 51.51412149217436 ] } },
 
- { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
                                       "name": "Montréal", "nameascii": "Montreal", "adm0name": "Canada", "adm0_a3": "Canada", 
                                       "adm1name": "Québec", "iso_a2": "CA", "note": null, 
                                       "latitude": -73.60579102612303, "longitude": 45.50594902202338 },
                        "geometry": { "type": "Point", "coordinates": [ -73.60579102612303, 45.50594902202338 ] } },
-  
-  
- { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
+   
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
                                       "name": "Bruxelles", "nameascii": "Bruxelles", "adm0name": "Belgique", "adm0_a3": "Belgique", 
                                       "adm1name": "Bruxelles-Capitale", "iso_a2": "BE", "note": null, 
                                       "latitude": 4.346627301208512, "longitude": 50.8586968543393 }, 
                         "geometry": { "type": "Point", "coordinates": [ 4.346627301208512, 50.8586968543393 ] } },
-   
-   
-  { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
+ 
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
                                       "name": "Ourense", "nameascii": "Ourense", "adm0name": "Espagne", "adm0_a3": "Espagne", 
                                       "adm1name": "Galice", "iso_a2": "ES", "note": null, 
                                       "latitude": -7.868410044677718, "longitude": 42.34331305541388 },
                          "geometry": { "type": "Point", "coordinates": [ -7.868410044677718, 42.34331305541388 ] } }
-
 ]}
