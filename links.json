@@ -13,7 +13,7 @@
                       "geometry": { "type": "LineString", "coordinates": [ [ 2.3432102861328286, 48.86186390500471], [ -7.868410044677718, 42.34331305541388] ] } }, 
   
 { "type": "Feature", "properties": { "sourcename": "Paris", "targetname": "Bruxelles" }, 
-                      "geometry": { "type": "LineString", "coordinates": [ [ 2.3432102861328286, 48.86186390500471], [ 4.346627301208512, 50.8586968543393] ] } }
+                      "geometry": { "type": "LineString", "coordinates": [ [ 2.3432102861328286, 48.86186390500471], [ 4.346627301208512, 50.8586968543393] ] } },
 
 { "type": "Feature", "properties": { "sourcename": "Montréal", "targetname": "Vancouver" }, 
                       "geometry": { "type": "LineString", "coordinates": [ [ -73.60579102612303, 45.50594902202338], [ -123.113952, 49.2608724] ] } }, 
