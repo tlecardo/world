@@ -30,6 +30,6 @@
                                       "name": "Ourense", "nameascii": "Ourense", "adm0name": "Espagne", "adm0_a3": "Espagne", 
                                       "adm1name": "Galice", "iso_a2": "ES", "note": null, 
                                       "latitude": -7.868410044677718, "longitude": 42.34331305541388 },
-                         "geometry": { "type": "Point", "coordinates": [ -7.868410044677718, 42.34331305541388 ] } },  
+                         "geometry": { "type": "Point", "coordinates": [ -7.868410044677718, 42.34331305541388 ] } }
 
 ]}
