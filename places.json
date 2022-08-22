@@ -6,11 +6,17 @@
                                       "latitude": 48.86186390500471, "longitude": 2.3432102861328286 }, 
                                       "geometry": { "type": "Point", "coordinates": [ 2.3432102861328286, 48.86186390500471 ] } },
  
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
+                                      "name": "Philadelphia", "nameascii": "Philadelphia", "adm0name": "USA", "adm0_a3": "USA", 
+                                      "adm1name": "Philadelphia", "iso_a2": "US", "note": null, 
+                                      "latitude": -75.1635262, "longitude": 39.9527237 },
+                                      "geometry": { "type": "Point", "coordinates": [ -75.1635262, 39.9527237 ] } },
+  
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
-                                      "name": "New-York", "nameascii": "New-York", "adm0name": "USA", "adm0_a3": "USA", 
-                                      "adm1name": "New-York", "iso_a2": "US", "note": null, 
-                                      "latitude":-74.0060152, "longitude": 40.7127281 },
-                                      "geometry": { "type": "Point", "coordinates": [ -74.0060152,  40.7127281 ] } },
+                                      "name": "Paris", "nameascii": "Paris", "adm0name": "France", "adm0_a3": "France", 
+                                      "adm1name": "Ile de France", "iso_a2": "FR", "note": null, 
+                                      "latitude": 48.86186390500471, "longitude": 2.3432102861328286 }, 
+                                      "geometry": { "type": "Point", "coordinates": [ 2.3432102861328286, 48.86186390500471 ] } },
     
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
                                       "name": "Grenoble", "nameascii": "Grenoble", "adm0name": "France", "adm0_a3": "France", 
