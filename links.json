@@ -3,8 +3,8 @@
 { "type": "Feature", "properties": { "sourcename": "Paris", "targetname": "Montréal" }, 
                       "geometry": { "type": "LineString", "coordinates": [ [ 2.3432102861328286, 48.86186390500471], [ -73.60579102612303, 45.50594902202338] ] } }, 
 
-{ "type": "Feature", "properties": { "sourcename": "Paris", "targetname": "Londres" }, 
-                      "geometry": { "type": "LineString", "coordinates": [ [ 2.3432102861328286, 48.86186390500471], [ -0.10802834606931988, 51.51412149217436] ] } }, 
+{ "type": "Feature", "properties": { "sourcename": "Paris", "targetname": "Bath" }, 
+                      "geometry": { "type": "LineString", "coordinates": [ [ 2.3432102861328286, 48.86186390500471], [-2.3596963, 51.3813864] ] } }, 
 
 { "type": "Feature", "properties": { "sourcename": "Paris", "targetname": "Grenoble" }, 
                       "geometry": { "type": "LineString", "coordinates": [ [ 2.3432102861328286, 48.86186390500471], [  5.7357819, 45.1875602] ] } }, 
