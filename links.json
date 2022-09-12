@@ -15,15 +15,9 @@
 { "type": "Feature", "properties": { "sourcename": "Paris", "targetname": "Bruxelles" }, 
                       "geometry": { "type": "LineString", "coordinates": [ [ 2.3432102861328286, 48.86186390500471], [ 4.346627301208512, 50.8586968543393] ] } },
 
-{ "type": "Feature", "properties": { "sourcename": "New-York", "targetname": "Paris" }, 
-                      "geometry": { "type": "LineString", "coordinates": [ [ -74.0060152, 40.7127281], [ 2.3432102861328286, 48.86186390500471] ] } },   
+{ "type": "Feature", "properties": { "sourcename": "Lisbonne", "targetname": "Paris" }, 
+                      "geometry": { "type": "LineString", "coordinates": [ [ -9.1365919, 38.7077507 ], [ 2.3432102861328286, 48.86186390500471] ] } },   
   
-{ "type": "Feature", "properties": { "sourcename": "Montréal", "targetname": "New-York" }, 
-                      "geometry": { "type": "LineString", "coordinates": [ [ -73.60579102612303, 45.50594902202338], [ -74.0060152, 40.7127281] ] } },
-  
-{ "type": "Feature", "properties": { "sourcename": "Philadelphia", "targetname": "Paris" }, 
-                      "geometry": { "type": "LineString", "coordinates": [ [ -75.1635262, 39.9527237], [ 2.3432102861328286, 48.86186390500471] ] } },   
-  
-{ "type": "Feature", "properties": { "sourcename": "Montréal", "targetname": "Philadelphia" }, 
-                      "geometry": { "type": "LineString", "coordinates": [ [ -73.60579102612303, 45.50594902202338], [ -75.1635262, 39.9527237] ] } }
+{ "type": "Feature", "properties": { "sourcename": "Montréal", "targetname": "Lisbonne" }, 
+                      "geometry": { "type": "LineString", "coordinates": [ [ -73.60579102612303, 45.50594902202338], [ -9.1365919, 38.7077507 ] ] } }
 ]}
