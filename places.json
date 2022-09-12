@@ -27,8 +27,8 @@
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
                                       "name": "Londres", "nameascii": "Londres", "adm0name": "Royaume-Uni", "adm0_a3": "Royaume-Uni", 
                                       "adm1name": "Grand Londres", "iso_a2": "UK", "note": null, 
-                                      "latitude": -0.10802834606931988, "longitude": 51.51412149217436 }, 
-                       "geometry": { "type": "Point", "coordinates": [ -0.10802834606931988, 51.51412149217436 ] } },
+                                      "latitude": -2.3596963, "longitude": 51.3813864 },
+                       "geometry": { "type": "Point", "coordinates": [-2.3596963, 51.3813864] } },
 
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
                                       "name": "Montréal", "nameascii": "Montreal", "adm0name": "Canada", "adm0_a3": "Canada", 
