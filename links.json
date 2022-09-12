@@ -12,7 +12,7 @@
 { "type": "Feature", "properties": { "sourcename": "Caen", "targetname": "Ourense" }, 
                       "geometry": { "type": "LineString", "coordinates": [ [ -0.33331039880740043, 49.15622396542398], [ -7.868410044677718, 42.34331305541388] ] } }, 
   
-{ "type": "Feature", "properties": { "sourcename": "v", "targetname": "Liège" }, 
+{ "type": "Feature", "properties": { "sourcename": "Caen", "targetname": "Liège" }, 
                       "geometry": { "type": "LineString", "coordinates": [ [ -0.33331039880740043, 49.15622396542398], [ 5.540409047562425, 50.56612176957151] ] } },
 
 { "type": "Feature", "properties": { "sourcename": "Caen", "targetname": "Lisbonne" }, 
