@@ -1,6 +1,6 @@
 {"type": "FeatureCollection","features": [ 
   
-{ "type": "Feature", "properties": { "sourcename": "Caen", "targetname": "Montréal",  "color": '#194cf0', }, 
+{ "type": "Feature", "properties": { "sourcename": "Caen", "targetname": "Montréal" }, 
                       "geometry": { "type": "LineString", "coordinates": [ [ -0.33331039880740043, 49.15622396542398], [ -73.62874807886477, 45.51015200931694] ] } }, 
 
 { "type": "Feature", "properties": { "sourcename": "Caen", "targetname": "Bath" }, 
