@@ -33,8 +33,8 @@
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-1 capital", 
                                       "name": " ", "nameascii": " ", "adm0name": "Canada", "adm0_a3": "Canada", 
                                       "adm1name": "Québec", "iso_a2": "CA", "note": "Québéc", 
-                                      "latitude": -71.8258668, "longitude": 52.4760892 },
-                       "geometry": { "type": "Point", "coordinates": [ -71.8258668, 52.4760892 ] } },
+                                      "latitude":-71.21238305619605, "longitude": 46.810564282094596 },
+                       "geometry": { "type": "Point", "coordinates": [ -71.21238305619605, 46.810564282094596 ] } },
   
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
                                       "name": "Montréal", "nameascii": "Montreal", "adm0name": "Canada", "adm0_a3": "Canada", 
