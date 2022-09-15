@@ -36,6 +36,12 @@
                                       "latitude":-71.21238305619605, "longitude": 46.810564282094596 },
                        "geometry": { "type": "Point", "coordinates": [ -71.21238305619605, 46.810564282094596 ] } },
   
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-1 capital", 
+                                      "name": "Halifax", "nameascii": "Halifax", "adm0name": "Canada", "adm0_a3": "Canada", 
+                                      "adm1name": "Nouvelle-Ecosse", "iso_a2": "CA", "note": null, 
+                                      "latitude":-63.57289981191113, "longitude":  44.64571201869623 },
+                       "geometry": { "type": "Point", "coordinates": [ -63.57289981191113,  44.64571201869623 ] } },
+  
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
                                       "name": "Montréal", "nameascii": "Montreal", "adm0name": "Canada", "adm0_a3": "Canada", 
                                       "adm1name": "Québec", "iso_a2": "CA", "note": null, 
