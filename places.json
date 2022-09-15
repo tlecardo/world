@@ -35,6 +35,13 @@
                                       "adm1name": "Québec", "iso_a2": "CA", "note": null, 
                                       "latitude": -73.62874807886477, "longitude": 45.51015200931694 },
                        "geometry": { "type": "Point", "coordinates": [ -73.62874807886477, 45.51015200931694 ] } },
+  
+  
+{ "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Admin-0 capital", 
+                                      "name": "Ottawa", "nameascii": "Ottawa", "adm0name": "Canada", "adm0_a3": "Canada", 
+                                      "adm1name": "Ontario", "iso_a2": "CA", "note": null, 
+                                      "latitude": -75.6901106, "longitude": 45.4208777 },
+                       "geometry": { "type": "Point", "coordinates": [ -75.6901106, 45.4208777 ] } },
  
 { "type": "Feature", "properties": { "scalerank": 0, "labelrank": 1, "featurecla": "Populated place", 
                                       "name": "Niagara-Falls", "nameascii": "Niagara-Falls", "adm0name": "Canada", "adm0_a3": "Canada", 
