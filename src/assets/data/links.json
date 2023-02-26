@@ -1,0 +1,215 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Caen",
+                "targetname": "Montréal",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -0.33331039880740043,
+                        49.15622396542398
+                    ],
+                    [
+                        -73.62874807886477,
+                        45.51015200931694
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Caen",
+                "targetname": "Bath",
+                "transport": "bus"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -0.33331039880740043,
+                        49.15622396542398
+                    ],
+                    [
+                        -2.3902675870780454,
+                        51.362712621105935
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Caen",
+                "targetname": "Grenoble",
+                "transport": "bus"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -0.33331039880740043,
+                        49.15622396542398
+                    ],
+                    [
+                        5.7357819,
+                        45.1875602
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Caen",
+                "targetname": "Ourense",
+                "transport": "bus"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -0.33331039880740043,
+                        49.15622396542398
+                    ],
+                    [
+                        -7.868410044677718,
+                        42.34331305541388
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Caen",
+                "targetname": "Liège",
+                "transport": "bus"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -0.33331039880740043,
+                        49.15622396542398
+                    ],
+                    [
+                        5.540409047562425,
+                        50.56612176957151
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Caen",
+                "targetname": "Lisbonne",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -0.33331039880740043,
+                        49.15622396542398
+                    ],
+                    [
+                        -9.1365919,
+                        38.7077507
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Montréal",
+                "targetname": "Lisbonne",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.62874807886477,
+                        45.51015200931694
+                    ],
+                    [
+                        -9.1365919,
+                        38.7077507
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Montréal",
+                "targetname": "Halifax",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.62874807886477,
+                        45.51015200931694
+                    ],
+                    [
+                        -63.57289981191113,
+                        44.64571201869623
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Montréal",
+                "targetname": "Vancouver",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.62874807886477,
+                        45.51015200931694
+                    ],
+                    [
+                        -123.113952,
+                        49.2608724
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Montréal",
+                "targetname": "New-York",
+                "transport": "bus"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.62874807886477,
+                        45.51015200931694
+                    ],
+                    [
+                        -74.0060152,
+                        40.7127281
+                    ]
+                ]
+            }
+        }
+    ]
+}
