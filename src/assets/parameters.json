@@ -1,0 +1,26 @@
+{
+    "flyer": {
+        "altitude": 30
+    },
+    "earth": {
+        "maxElevation": 65,
+        "initRotation": [
+            0,
+            -30
+        ],
+        "scaleExtent": [
+            1,
+            8
+        ],
+        "size": {
+            "width": 960,
+            "height": 500,
+            "radius": 220
+        }
+    },
+    "sensitivity": 0.25,
+    "offset" : {
+        "X": 480,
+        "Y": 250
+    }
+}

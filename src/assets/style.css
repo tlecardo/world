@@ -26,8 +26,7 @@
 
   .labels {
     font: 6px sans-serif;
-    fill: black;
-    opacity: .5;
+    fill: rgba(0, 0, 0, 0.4);
   }
 
   .noclicks {
@@ -46,7 +45,7 @@
   }
 
   .flyers {
-    stroke-width: 1;
+    stroke-width: 2;
     opacity: .6;
     stroke: darkred;
   }

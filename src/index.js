@@ -5,30 +5,20 @@
 // https://medium.com/@xiaoyangzhao/drawing-curves-on-webgl-globe-using-three-js-and-d3-draft-7e782ffd7ab
 // https://raw.githubusercontent.com/d3/d3.github.com/master/world-110m.v1.json
 
-
-var width = 960,
-    height = 500,
-    radius = 220,
-    sensitivity = 0.25,
-    offsetX = width / 2,
-    offsetY = height / 2,
-    maxElevation = 65,
-    initRotation = [0, -30],
-    scaleExtent = [1, 8],
-    flyerAltitude = 30;
+let params = require('./assets/parameters.json');
 
 var projection = d3
     .geoOrthographic()
-    .scale(radius)
-    .rotate(initRotation)
-    .translate([offsetX, offsetY])
+    .scale(params.earth.size.radius)
+    .rotate(params.earth.initRotation)
+    .translate([params.offset.X, params.offset.Y])
     .clipAngle(90);
 
 var skyProjection = d3
     .geoOrthographic()
-    .scale(radius + flyerAltitude)
-    .rotate(initRotation)
-    .translate([offsetX, offsetY])
+    .scale(params.earth.size.radius + params.flyer.altitude)
+    .rotate(params.earth.initRotation)
+    .translate([params.offset.X, params.offset.Y])
     .clipAngle(90);
 
 var path = d3
@@ -45,22 +35,22 @@ var graticule = d3.geoGraticule();
 
 var svg = d3
     .select("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("transform-origin", offsetX + "px " + offsetY + "px")
+    .attr("width", params.earth.size.width)
+    .attr("height", params.earth.size.height)
+    .attr("transform-origin", params.offset.X + "px " + params.offset.Y + "px")
     .call(
         d3
             .drag()
             .subject(function () {
                 var r = projection.rotate();
-                return { x: r[0] / sensitivity, y: -r[1] / sensitivity };
+                return { x: r[0] / params.sensitivity, y: -r[1] / params.sensitivity };
             })
             .on("drag", dragged)
     )
     .call(
         d3
             .zoom()
-            .scaleExtent(scaleExtent)
+            .scaleExtent(params.earth.scaleExtent)
             .on("zoom", zoomed)
     )
     .on("dblclick.zoom", null);
@@ -74,8 +64,8 @@ d3.queue()
 function ready(error, world, places, links) {
     svg
         .append("ellipse")
-        .attr("cx", offsetX - 40)
-        .attr("cy", offsetY + radius - 20)
+        .attr("cx", params.offset.X - 40)
+        .attr("cy", params.offset.Y + params.earth.size.radius - 20)
         .attr("rx", projection.scale() * 0.9)
         .attr("ry", projection.scale() * 0.25)
         .attr("class", "noclicks")
@@ -83,8 +73,8 @@ function ready(error, world, places, links) {
 
     svg
         .append("circle")
-        .attr("cx", offsetX)
-        .attr("cy", offsetY)
+        .attr("cx", params.offset.X)
+        .attr("cy", params.offset.Y)
         .attr("r", projection.scale())
         .attr("class", "noclicks")
         .style("fill", "url(#ocean_fill)");
@@ -103,16 +93,16 @@ function ready(error, world, places, links) {
 
     svg
         .append("circle")
-        .attr("cx", offsetX)
-        .attr("cy", offsetY)
+        .attr("cx", params.offset.X)
+        .attr("cy", params.offset.Y)
         .attr("r", projection.scale())
         .attr("class", "noclicks")
         .style("fill", "url(#globe_highlight)");
 
     svg
         .append("circle")
-        .attr("cx", offsetX)
-        .attr("cy", offsetY)
+        .attr("cx", params.offset.X)
+        .attr("cy", params.offset.Y)
         .attr("r", projection.scale())
         .attr("class", "noclicks")
         .style("fill", "url(#globe_shading)");
@@ -124,12 +114,9 @@ function ready(error, world, places, links) {
         .data(places.features)
         .enter()
         .append("path")
+        .attr("id", d => "p" + d.properties.name)
         .attr("class", "point")
-        .attr("d", path)
-        .on("click", (path) => {
-            console.log(path)
-            // d3.selectAll("[d=" + path +"]").style("fill", "green")        
-        });
+        .attr("d", path);
 
     svg
         .append("g")
@@ -139,6 +126,7 @@ function ready(error, world, places, links) {
         .enter()
         .append("text")
         .attr("class", "label")
+        .attr("id", d => "l" + d.properties.name)
         .text(d => d.properties.name);
 
     svg
@@ -165,27 +153,74 @@ function ready(error, world, places, links) {
         .selectAll("path").data(links.features)
         .enter().append("path")
         .attr("class", "flyer")
+        .attr("id", d => "f" + d.properties.sourcename + d.properties.targetname)
         .attr("d", function (d) { return swoosh(flying_arc(d)) })
-        .attr("stroke", d => d.properties.transport === "plane" ? "blue" : "red")
         .attr("opacity", function (d) {
             return fade_at_edge(d)
+        }).on("mouseover", (d) => {
+
+            d3.selectAll(".flyer")
+                .style("stroke-width", 1)
+                
+            d3.selectAll(".labels")
+                .style("font-size", 3)
+
+            d3.selectAll("#f" + d.properties.sourcename + d.properties.targetname)
+                .style("stroke-width", 3)
+                .style("stroke", d => d.properties.transport === "plane" ? "blue" : "green") // selon params
+
+            d3.selectAll("#p" + d.properties.sourcename)
+                .style("fill", 'blue')  // selon params
+            d3.selectAll("#p" + d.properties.targetname)
+                .style("fill", 'blue') // selon params
+
+            d3.selectAll("#l" + d.properties.sourcename)
+                .style("font-size", 10)
+                .style("font-weight", "bold")
+            d3.selectAll("#l" + d.properties.targetname)
+                .style("font-size", 10)
+                .style("font-weight", "bold")
+
+        }).on("mouseout", (d) => {
+
+            d3.selectAll(".flyer")
+                .style("stroke-width", 2)
+                .style("stroke", null)
+
+            d3.selectAll(".labels")
+                .style("font-size", 6)
+
+            d3.selectAll("#p" + d.properties.sourcename)
+                .style("fill", null)   // selon params
+
+            d3.selectAll("#p" + d.properties.targetname)
+                .style("fill", null)   // selon params
+
+            d3.selectAll("#l" + d.properties.sourcename)
+                .style("font-size", 6)
+                .style("font-weight", null)
+
+            d3.selectAll("#l" + d.properties.targetname)
+                .style("font-size", 6)
+                .style("font-weight", null)
+
         });
 }
 
 function position_labels() {
-    var centerPos = projection.invert([offsetX, offsetY]);
+    var centerPos = projection.invert([params.offset.X, params.offset.Y]);
 
     svg
         .selectAll(".label")
         .attr("text-anchor", function (d) {
             var x = projection(d.geometry.coordinates)[0];
-            return x < offsetX - 20 ? "end" : x < offsetX + 20 ? "middle" : "start";
+            return x < params.offset.X - 20 ? "end" : x < params.offset.X + 20 ? "middle" : "start";
         })
         .attr("transform", function (d) {
             var loc = projection(d.geometry.coordinates),
                 x = loc[0],
                 y = loc[1];
-            var offset = x < offsetX ? -5 : 5;
+            var offset = x < params.offset.X ? -5 : 5;
             return "translate(" + (x + offset) + "," + (y - 2) + ")";
         })
         .style("display", function (d) {
@@ -210,7 +245,7 @@ function flying_arc(pts) {
 }
 
 function fade_at_edge(d) {
-    var centerPos = projection.invert([offsetX, offsetY]);
+    var centerPos = projection.invert([params.offset.X, params.offset.Y]);
 
     start = d.geometry.coordinates[0];
     end = d.geometry.coordinates[1];
@@ -230,12 +265,12 @@ function location_along_arc(start, end, loc) {
 }
 
 function dragged() {
-    var o1 = [d3.event.x * sensitivity, -d3.event.y * sensitivity];
+    var o1 = [d3.event.x * params.sensitivity, -d3.event.y * params.sensitivity];
     o1[1] =
-        o1[1] > maxElevation
-            ? maxElevation
-            : o1[1] < -maxElevation
-                ? -maxElevation
+        o1[1] > params.earth.maxElevation
+            ? params.earth.maxElevation
+            : o1[1] < -params.earth.maxElevation
+                ? -params.earth.maxElevation
                 : o1[1];
     projection.rotate(o1);
     skyProjection.rotate(o1);
