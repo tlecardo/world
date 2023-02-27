@@ -33,8 +33,25 @@ var swoosh = d3.line()
 
 var graticule = d3.geoGraticule();
 
-var svg = d3
-    .select("svg")
+
+const path_f = d3.geoPath();
+
+const projection_f = d3.geoConicConformal()
+    .center([2.454071, 46.279229])
+    .scale(2600)
+    .translate([params.france.size.width / 2, params.france.size.height / 2]);
+
+path_f.projection(projection_f);
+
+const svg_f = d3.select("svg#france")
+    .attr("width", params.france.size.width)
+    .attr("height", params.france.size.height);
+
+const deps = svg_f.append("g");
+
+
+var svg_w = d3
+    .select("svg#world")
     .attr("width", params.earth.size.width)
     .attr("height", params.earth.size.height)
     .attr("transform-origin", params.offset.X + "px " + params.offset.Y + "px")
@@ -56,13 +73,26 @@ var svg = d3
     .on("dblclick.zoom", null);
 
 d3.queue()
+    .defer(d3.json, "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson")
     .defer(d3.json, "https://raw.githubusercontent.com/d3/d3.github.com/master/world-110m.v1.json")
     .defer(d3.json, "places.json")
     .defer(d3.json, "links.json")
     .await(ready);
 
-function ready(error, world, places, links) {
-    svg
+function ready(error, france, world, places, links) {
+
+    deps.selectAll("path")
+        .data(france.features)
+        .enter()
+        .append("path")
+        .attr("d", path_f)
+        .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ? "var(--visited-color)" :
+            params.livedDepartements.includes(parseInt(dep.properties.code)) ? "var(--lived-color)" : "var(--rest-color)");
+
+
+    svg_f.style("display", "none")
+
+    svg_w
         .append("ellipse")
         .attr("cx", params.offset.X - 40)
         .attr("cy", params.offset.Y + params.earth.size.radius - 20)
@@ -71,7 +101,7 @@ function ready(error, world, places, links) {
         .attr("class", "noclicks")
         .style("fill", "url(#drop_shadow)");
 
-    svg
+    svg_w
         .append("circle")
         .attr("cx", params.offset.X)
         .attr("cy", params.offset.Y)
@@ -79,19 +109,19 @@ function ready(error, world, places, links) {
         .attr("class", "noclicks")
         .style("fill", "url(#ocean_fill)");
 
-    svg
+    svg_w
         .append("path")
         .datum(topojson.feature(world, world.objects.land))
         .attr("class", "land")
         .attr("d", path);
 
-    svg
+    svg_w
         .append("path")
         .datum(graticule)
         .attr("class", "graticule noclicks")
         .attr("d", path);
 
-    svg
+    svg_w
         .append("circle")
         .attr("cx", params.offset.X)
         .attr("cy", params.offset.Y)
@@ -99,7 +129,7 @@ function ready(error, world, places, links) {
         .attr("class", "noclicks")
         .style("fill", "url(#globe_highlight)");
 
-    svg
+    svg_w
         .append("circle")
         .attr("cx", params.offset.X)
         .attr("cy", params.offset.Y)
@@ -107,7 +137,20 @@ function ready(error, world, places, links) {
         .attr("class", "noclicks")
         .style("fill", "url(#globe_shading)");
 
-    svg
+    svg_w
+        .append("g")
+        .attr("class", "countries")
+        .selectAll("path")
+        .data(topojson.feature(world, world.objects.countries).features)
+        .enter()
+        .append("path")
+        .attr("id", p => "c" + p.id)
+        .attr("d", path)
+        .style("fill", p => params.visitedCountries.includes(parseInt(p.id)) ? "var(--visited-color)" :
+            params.livedCountries.includes(parseInt(p.id)) ? "var(--lived-color)" : "var(--rest-color)");
+
+
+    svg_w
         .append("g")
         .attr("class", "points")
         .selectAll(".point")
@@ -118,7 +161,7 @@ function ready(error, world, places, links) {
         .attr("class", "point")
         .attr("d", path);
 
-    svg
+    svg_w
         .append("g")
         .attr("class", "labels")
         .selectAll(".label")
@@ -129,18 +172,9 @@ function ready(error, world, places, links) {
         .attr("id", d => "l" + d.properties.name)
         .text(d => d.properties.name);
 
-    svg
-        .append("g")
-        .attr("class", "countries")
-        .selectAll("path")
-        .data(topojson.feature(world, world.objects.countries).features)
-        .enter()
-        .append("path")
-        .attr("d", path);
-
     position_labels();
 
-    svg.append("g").attr("class", "arcs")
+    svg_w.append("g").attr("class", "arcs")
         .selectAll("path").data(links.features)
         .enter().append("path")
         .attr("class", "arc")
@@ -149,7 +183,7 @@ function ready(error, world, places, links) {
             return fade_at_edge(d)
         });
 
-    svg.append("g").attr("class", "flyers")
+    svg_w.append("g").attr("class", "flyers")
         .selectAll("path").data(links.features)
         .enter().append("path")
         .attr("class", "flyer")
@@ -159,10 +193,14 @@ function ready(error, world, places, links) {
             return fade_at_edge(d)
         }).on("mouseover", (d) => {
 
+            d3.selectAll(".point")
+                .style("visibility", "hidden")
+
             d3.selectAll(".flyer")
                 .style("stroke-width", 1)
-                
-            d3.selectAll(".labels")
+
+            d3.selectAll(".label")
+                .style("visibility", "hidden")
                 .style("font-size", 3)
 
             d3.selectAll("#f" + d.properties.sourcename + d.properties.targetname)
@@ -170,14 +208,18 @@ function ready(error, world, places, links) {
                 .style("stroke", d => d.properties.transport === "plane" ? "blue" : "green") // selon params
 
             d3.selectAll("#p" + d.properties.sourcename)
+                .style("visibility", "visible")
                 .style("fill", 'blue')  // selon params
             d3.selectAll("#p" + d.properties.targetname)
+                .style("visibility", "visible")
                 .style("fill", 'blue') // selon params
 
             d3.selectAll("#l" + d.properties.sourcename)
+                .style("visibility", "visible")
                 .style("font-size", 10)
                 .style("font-weight", "bold")
             d3.selectAll("#l" + d.properties.targetname)
+                .style("visibility", "visible")
                 .style("font-size", 10)
                 .style("font-weight", "bold")
 
@@ -187,7 +229,8 @@ function ready(error, world, places, links) {
                 .style("stroke-width", 2)
                 .style("stroke", null)
 
-            d3.selectAll(".labels")
+            d3.selectAll(".label")
+                .style("visibility", "visible")
                 .style("font-size", 6)
 
             d3.selectAll("#p" + d.properties.sourcename)
@@ -205,12 +248,17 @@ function ready(error, world, places, links) {
                 .style("font-weight", null)
 
         });
+
+        svg_w.selectAll("#c250").on("click", (d) => {
+            svg_f.style("display", "block")
+            svg_w.style("display", "none")
+        })
 }
 
 function position_labels() {
     var centerPos = projection.invert([params.offset.X, params.offset.Y]);
 
-    svg
+    svg_w
         .selectAll(".label")
         .attr("text-anchor", function (d) {
             var x = projection(d.geometry.coordinates)[0];
@@ -279,30 +327,30 @@ function dragged() {
 
 function zoomed() {
     if (d3.event) {
-        svg.attr("transform", "scale(" + d3.event.transform.k + ")");
+        svg_w.attr("transform", "scale(" + d3.event.transform.k + ")");
     }
 }
 
 function refresh() {
-    svg.selectAll(".land").attr("d", path);
-    svg.selectAll(".countries path").attr("d", path);
-    svg.selectAll(".graticule").attr("d", path);
+    svg_w.selectAll(".land").attr("d", path);
+    svg_w.selectAll(".countries path").attr("d", path);
+    svg_w.selectAll(".graticule").attr("d", path);
     refreshLandmarks();
     refreshFlyers();
 }
 
 function refreshLandmarks() {
-    svg.selectAll(".point").attr("d", path);
+    svg_w.selectAll(".point").attr("d", path);
     position_labels();
 }
 
 function refreshFlyers() {
-    svg.selectAll(".arc").attr("d", path)
+    svg_w.selectAll(".arc").attr("d", path)
         .attr("opacity", function (d) {
             return fade_at_edge(d)
         });
 
-    svg.selectAll(".flyer")
+    svg_w.selectAll(".flyer")
         .attr("d", function (d) { return swoosh(flying_arc(d)) })
         .attr("opacity", function (d) {
             return fade_at_edge(d)

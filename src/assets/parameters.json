@@ -1,6 +1,16 @@
 {
+    "visitedCountries" : [276, 380, 528, 620, 724, 840],
+    "livedCountries" : [56, 124, 250, 826],
+    "visitedDepartements" : [17, 18, 22, 28, 29, 33, 37, 40, 41, 44, 49, 50, 53, 56, 59, 61, 67, 68, 69, 73, 76, 85, 91],
+    "livedDepartements" : [14, 27, 35, 38, 75],
     "flyer": {
         "altitude": 30
+    },
+    "france": {
+        "size": {
+            "width": 550,
+            "height": 550
+        }
     },
     "earth": {
         "maxElevation": 65,
