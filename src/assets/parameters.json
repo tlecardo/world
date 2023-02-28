@@ -6,12 +6,6 @@
     "flyer": {
         "altitude": 30
     },
-    "france": {
-        "size": {
-            "width": 550,
-            "height": 550
-        }
-    },
     "earth": {
         "maxElevation": 65,
         "initRotation": [
@@ -20,17 +14,15 @@
         ],
         "scaleExtent": [
             1,
-            8
+            1.8
         ],
         "size": {
-            "width": 960,
-            "height": 500,
-            "radius": 220
+            "radius": 270
         }
     },
     "sensitivity": 0.25,
     "offset" : {
-        "X": 480,
-        "Y": 250
+        "X": 300,
+        "Y": 275
     }
 }

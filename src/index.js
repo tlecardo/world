@@ -33,31 +33,25 @@ var swoosh = d3.line()
 
 var graticule = d3.geoGraticule();
 
-
 const path_f = d3.geoPath();
 
 const projection_f = d3.geoConicConformal()
     .center([2.454071, 46.279229])
-    .scale(2600)
-    .translate([params.france.size.width / 2, params.france.size.height / 2]);
+    .scale(3000)
 
 path_f.projection(projection_f);
 
 const svg_f = d3.select("svg#france")
-    .attr("width", params.france.size.width)
-    .attr("height", params.france.size.height);
+    .attr("width", "auto")
+    .attr("align-item", "center")
 
 const deps = svg_f.append("g");
 
-
-var svg_w = d3
-    .select("svg#world")
-    .attr("width", params.earth.size.width)
-    .attr("height", params.earth.size.height)
-    .attr("transform-origin", params.offset.X + "px " + params.offset.Y + "px")
+var svg_w = d3.select("svg#world")
+    .attr("width", "auto")
+    .attr("align-item", "center")
     .call(
-        d3
-            .drag()
+        d3.drag()
             .subject(function () {
                 var r = projection.rotate();
                 return { x: r[0] / params.sensitivity, y: -r[1] / params.sensitivity };
@@ -68,18 +62,22 @@ var svg_w = d3
         d3
             .zoom()
             .scaleExtent(params.earth.scaleExtent)
-            .on("zoom", zoomed)
+            .on("zoom", x => zoomed(svg_w, x))
     )
     .on("dblclick.zoom", null);
 
 d3.queue()
     .defer(d3.json, "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson")
+    .defer(d3.json, "https://raw.githubusercontent.com/wisdomtheif/Canadian_GeoJSON/master/canada_provinces.geojson")
     .defer(d3.json, "https://raw.githubusercontent.com/d3/d3.github.com/master/world-110m.v1.json")
     .defer(d3.json, "places.json")
     .defer(d3.json, "links.json")
     .await(ready);
 
-function ready(error, france, world, places, links) {
+function ready(error, france, canada, world, places, links) {
+
+
+    console.log(canada)
 
     deps.selectAll("path")
         .data(france.features)
@@ -88,9 +86,6 @@ function ready(error, france, world, places, links) {
         .attr("d", path_f)
         .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ? "var(--visited-color)" :
             params.livedDepartements.includes(parseInt(dep.properties.code)) ? "var(--lived-color)" : "var(--rest-color)");
-
-
-    svg_f.style("display", "none")
 
     svg_w
         .append("ellipse")
@@ -250,8 +245,7 @@ function ready(error, france, world, places, links) {
         });
 
         svg_w.selectAll("#c250").on("click", (d) => {
-            svg_f.style("display", "block")
-            svg_w.style("display", "none")
+            document.getElementById("france").scrollIntoView({behavior: 'smooth'});
         })
 }
 
@@ -325,9 +319,9 @@ function dragged() {
     refresh();
 }
 
-function zoomed() {
+function zoomed(svg) {
     if (d3.event) {
-        svg_w.attr("transform", "scale(" + d3.event.transform.k + ")");
+        svg.transition().duration(100).attr("transform", "scale(" + d3.event.transform.k + ")");
     }
 }
 
