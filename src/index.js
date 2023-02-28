@@ -47,6 +47,22 @@ const svg_f = d3.select("svg#france")
 
 const deps = svg_f.append("g");
 
+const path_c = d3.geoPath();
+
+const projection_c = d3.geoConicConformal()
+    .center([0, 0])
+//.scale(3000)
+
+path_c.projection(projection_c);
+
+const svg_c = d3.select("svg#canada")
+    .attr("width", "auto")
+    .attr("align-item", "center")
+
+const prov = svg_c.append("g");
+
+
+
 var svg_w = d3.select("svg#world")
     .attr("width", "auto")
     .attr("align-item", "center")
@@ -76,16 +92,32 @@ d3.queue()
 
 function ready(error, france, canada, world, places, links) {
 
-
-    console.log(canada)
+    console.log(topojson.feature(world, world.objects.countries).features)
+    console.log(france)
 
     deps.selectAll("path")
         .data(france.features)
         .enter()
         .append("path")
+        .attr("id", p => "dep" + p.properties.code)
         .attr("d", path_f)
-        .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ? "var(--visited-color)" :
-            params.livedDepartements.includes(parseInt(dep.properties.code)) ? "var(--lived-color)" : "var(--rest-color)");
+        .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ?
+            "var(--visited-color)" : params.livedDepartements.includes(parseInt(dep.properties.code)) ?
+                "var(--lived-color)" : "var(--rest-color)")
+        .on("mouseover", (dep) => {
+            svg_f.selectAll("#dep" + dep.properties.code)
+                .style("fill", "rgb(60, 60, 60)");
+        })
+        .on("mouseout", (dep) => {
+            svg_f.selectAll("#dep" + dep.properties.code)
+                .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ?
+                    "var(--visited-color)" : params.livedDepartements.includes(parseInt(dep.properties.code)) ?
+                        "var(--lived-color)" : "var(--rest-color)");
+        })
+
+
+
+        ;
 
     svg_w
         .append("ellipse")
@@ -244,9 +276,9 @@ function ready(error, france, canada, world, places, links) {
 
         });
 
-        svg_w.selectAll("#c250").on("click", (d) => {
-            document.getElementById("france").scrollIntoView({behavior: 'smooth'});
-        })
+    svg_w.selectAll("#c250").on("click", (d) => {
+        document.getElementById("france").scrollIntoView({ behavior: 'smooth' });
+    })
 }
 
 function position_labels() {
