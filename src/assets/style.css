@@ -51,12 +51,10 @@
 
 #text_c {
   grid-area: text_c;
-  background-color: aqua;
 }
 
 #ccanada {
   grid-area: ccanada;
-  background-color: yellow;
   width: auto;
   height: auto;
 }

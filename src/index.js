@@ -49,9 +49,9 @@ const deps = svg_f.append("g");
 
 const path_c = d3.geoPath();
 
-const projection_c = d3.geoConicConformal()
-    .center([0, 0])
-//.scale(3000)
+const projection_c = d3.geoMercator()
+    .scale(450)
+    .rotate([96, -64.15]);
 
 path_c.projection(projection_c);
 
@@ -59,8 +59,7 @@ const svg_c = d3.select("svg#canada")
     .attr("width", "auto")
     .attr("align-item", "center")
 
-const prov = svg_c.append("g");
-
+const provs = svg_c.append("g");
 
 
 var svg_w = d3.select("svg#world")
@@ -92,8 +91,26 @@ d3.queue()
 
 function ready(error, france, canada, world, places, links) {
 
-    console.log(topojson.feature(world, world.objects.countries).features)
-    console.log(france)
+    console.log(canada.features)
+    provs.selectAll("path")
+        .data(canada.features)
+        .enter()
+        .append("path")
+        .attr("id", prov => "prov" + prov.properties.CODE)
+        .attr("d", path_c)
+        .style("fill", prov => params.visitedProvs.includes(prov.properties.CODE) ?
+            "var(--visited-color)" : params.livedProvs.includes(prov.properties.CODE) ?
+                "var(--lived-color)" : "var(--rest-color)")
+        .on("mouseover", prov => {
+            svg_c.selectAll("#prov" + prov.properties.CODE)
+                .style("fill", "rgb(60, 60, 60)");
+        })
+        .on("mouseout", prov => {
+            svg_c.selectAll("#prov" + prov.properties.CODE)
+                .style("fill", prov => params.visitedProvs.includes(prov.properties.CODE) ?
+                    "var(--visited-color)" : params.livedProvs.includes(prov.properties.CODE) ?
+                        "var(--lived-color)" : "var(--rest-color)")
+        });
 
     deps.selectAll("path")
         .data(france.features)
@@ -104,20 +121,16 @@ function ready(error, france, canada, world, places, links) {
         .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ?
             "var(--visited-color)" : params.livedDepartements.includes(parseInt(dep.properties.code)) ?
                 "var(--lived-color)" : "var(--rest-color)")
-        .on("mouseover", (dep) => {
+        .on("mouseover", dep => {
             svg_f.selectAll("#dep" + dep.properties.code)
                 .style("fill", "rgb(60, 60, 60)");
         })
-        .on("mouseout", (dep) => {
+        .on("mouseout", dep => {
             svg_f.selectAll("#dep" + dep.properties.code)
                 .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ?
                     "var(--visited-color)" : params.livedDepartements.includes(parseInt(dep.properties.code)) ?
                         "var(--lived-color)" : "var(--rest-color)");
-        })
-
-
-
-        ;
+        });
 
     svg_w
         .append("ellipse")
@@ -177,14 +190,38 @@ function ready(error, france, canada, world, places, links) {
             params.livedCountries.includes(parseInt(p.id)) ? "var(--lived-color)" : "var(--rest-color)");
 
 
+
+    svg_f.append("g")
+        .attr("class", "points")
+        .selectAll(".point")
+        .data(places.features)
+        .enter()
+        .filter(d => d.properties.note.includes("france"))
+        .append("path")
+        .attr("id", d => "pf" + d.properties.name)
+        .attr("class", "point")
+        .attr("d", path_f);
+
+    svg_c.append("g")
+        .attr("class", "points")
+        .selectAll(".point")
+        .data(places.features)
+        .enter()
+        .filter(d => d.properties.note.includes("canada"))
+        .append("path")
+        .attr("id", d => "pc" + d.properties.name)
+        .attr("class", "point")
+        .attr("d", path_c);
+
     svg_w
         .append("g")
         .attr("class", "points")
         .selectAll(".point")
         .data(places.features)
         .enter()
+        .filter(d => d.properties.note.includes("world"))
         .append("path")
-        .attr("id", d => "p" + d.properties.name)
+        .attr("id", d => "pw" + d.properties.name)
         .attr("class", "point")
         .attr("d", path);
 
@@ -194,6 +231,7 @@ function ready(error, france, canada, world, places, links) {
         .selectAll(".label")
         .data(places.features)
         .enter()
+        .filter(d => d.properties.note.includes("world"))
         .append("text")
         .attr("class", "label")
         .attr("id", d => "l" + d.properties.name)
@@ -278,6 +316,10 @@ function ready(error, france, canada, world, places, links) {
 
     svg_w.selectAll("#c250").on("click", (d) => {
         document.getElementById("france").scrollIntoView({ behavior: 'smooth' });
+    })
+
+    svg_w.selectAll("#c124").on("click", (d) => {
+        document.getElementById("canada").scrollIntoView({ behavior: 'smooth' });
     })
 }
 

@@ -4,16 +4,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Populated place",
                 "name": "Caen",
-                "nameascii": "Caen",
                 "adm0name": "France",
-                "adm0_a3": "France",
                 "adm1name": "Normandie",
-                "iso_a2": "FR",
-                "note": null,
+                "note": ["world", "france"],
                 "latitude": 49.15622396542398,
                 "longitude": -0.33331039880740043
             },
@@ -28,16 +22,767 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Admin-0 capital",
+                "name": "Evreux",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": ["france"],
+                "latitude": 49.0268903,
+                "longitude": 1.1510164
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.1510164,
+                    49.0268903
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Le Havre",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": ["france"],
+                "latitude": 49.4938975,
+                "longitude": 0.1079732
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.1079732,
+                    49.4938975
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Flamanville",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": ["france"],
+                "latitude": 49.5503806,
+                "longitude": -1.8589607
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.8589607,
+                    49.5503806
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Cherbourg",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": ["france"],
+                "latitude": 49.6425343,
+                "longitude": -1.6249565
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.6249565,
+                    49.6425343
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Alençon",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": ["france"],
+                "latitude": 48.4312059,
+                "longitude": 0.0911374
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.0911374,
+                    48.4312059
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Granville",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": ["france"],
+                "latitude": 48.8376284,
+                "longitude": -1.5959213
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.5959213,
+                    48.8376284
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Les Andelys",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": ["france"],
+                "latitude": 49.2469193,
+                "longitude": 1.4215534
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.4215534,
+                    49.2469193
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Aubevoye",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": ["france"],
+                "latitude": 49.177214,
+                "longitude": 1.3331944
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.3331944,
+                    49.177214
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Paris",
+                "adm0name": "France",
+                "adm1name": "Paris",
+                "note": ["france"],
+                "latitude": 48.8588897,
+                "longitude": 2.320041
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.320041,
+                    48.8588897
+                ]
+            }
+        },        
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Rennes",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 48.1113387,
+                "longitude": -1.6800198
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.6800198,
+                    48.1113387
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Cancale",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 48.6771721,
+                "longitude": -1.8506953
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.8506953,
+                    48.6771721
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Erquy",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 48.6286582,
+                "longitude": -2.4642309
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.4642309,
+                    48.6286582
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "St-Malo",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 48.649518,
+                "longitude": -2.0260409
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.0260409,
+                    48.649518
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vierzon",
+                "adm0name": "France",
+                "adm1name": "Centre-Val-de-Loire",
+                "note": ["france"],
+                "latitude": 47.2217489,
+                "longitude": 2.0691421
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.0691421,
+                    47.2217489
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Chartres",
+                "adm0name": "France",
+                "adm1name": "Centre-Val-de-Loire",
+                "note": ["france"],
+                "latitude": 48.4438601,
+                "longitude": 1.4881434
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.4881434,
+                    48.4438601
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Chateaudun",
+                "adm0name": "France",
+                "adm1name": "Centre-Val-de-Loire",
+                "note": ["france"],
+                "latitude": 48.0702298,
+                "longitude": 1.3284948
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.3284948,
+                    48.0702298
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vendôme",
+                "adm0name": "France",
+                "adm1name": "Centre-Val-de-Loire",
+                "note": ["france"],
+                "latitude": 47.7934453,
+                "longitude": 1.0662256
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.0662256,
+                    47.7934453
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Montflour",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 48.34003,
+                "longitude": -0.500583
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.500583,
+                    48.34003
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Noyant-Villages",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 47.497443,
+                "longitude": 0.0923351
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.0923351,
+                    47.497443
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tours",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 47.3900474,
+                "longitude": 0.6889268
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.6889268,
+                    47.3900474
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Saumur",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 47.2596224,
+                "longitude": -0.0785177
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.0785177,
+                    47.2596224
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Talmont-St-Hilaire",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 46.4666884,
+                "longitude": -1.618977
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.618977,
+                    46.4666884
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "La Rochelle",
+                "adm0name": "France",
+                "adm1name": "Occitanie",
+                "note": ["france"],
+                "latitude": 46.1591126,
+                "longitude": -1.1520434
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.1520434,
+                    46.1591126
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Guidel",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 47.78739459946351,
+                "longitude": -3.488924474165689
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.488924474165689,
+                    47.78739459946351
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Biscarosse",
+                "adm0name": "France",
+                "adm1name": "Occitanie",
+                "note": ["france"],
+                "latitude": 44.4031179,
+                "longitude": -1.1780588
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.1780588,
+                    44.4031179
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pyla",
+                "adm0name": "France",
+                "adm1name": "Occitanie",
+                "note": ["france"],
+                "latitude": 44.58751171409008,
+                "longitude": -1.2118541078810008
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.2118541078810008,
+                    44.58751171409008
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Noirmoutier",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 47.00223432061194,
+                "longitude": -2.244355095555053
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.244355095555053,
+                    47.00223432061194
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Saint-Jean-de-Monts",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 46.7859869147032,
+                "longitude": -2.071424392778538
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.071424392778538,
+                    46.7859869147032
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Notre-Dame-de-Monts",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 46.83061723253797,
+                "longitude": -2.1309203108228747
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.1309203108228747,
+                    46.83061723253797
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "St-Nazaire",
+                "nameascii": "St-Nazaire",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 47.27385898053963,
+                "longitude": -2.21340893667777
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.21340893667777,
+                    47.27385898053963
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Piriac",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 47.37931751276763,
+                "longitude": -2.5452208546633037
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.102782565388972,
+                    47.37931751276763
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vannes",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 47.65745840819265,
+                "longitude": -2.763291937848271
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.763291937848271,
+                    47.65745840819265
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Carnac",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 47.58477483481397,
+                "longitude": -3.0807890848119457
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.0807890848119457,
+                    47.58477483481397
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pt-du-Raz",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 48.04003287372096,
+                "longitude": -4.7393591691632615
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.7393591691632615,
+                    48.04003287372096
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "St-Amand-les-Eaux",
+                "adm0name": "France",
+                "adm1name": "Haut-de-France",
+                "note": ["france"],
+                "latitude": 50.4491519,
+                "longitude": 3.4281142
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    3.4281142,
+                    50.4491519
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Rhinau",
+                "adm0name": "France",
+                "adm1name": "Grand-Est",
+                "note": ["france"],
+                "latitude": 48.3180965,
+                "longitude": 7.7054878
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.7054878,
+                    48.3180965
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Strasbourg",
+                "adm0name": "France",
+                "adm1name": "Grand-Est",
+                "note": ["france"],
+                "latitude": 48.584614,
+                "longitude": 7.7507127
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.7507127,
+                    48.584614
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Colmar",
+                "adm0name": "France",
+                "adm1name": "Grand-Est",
+                "note": ["france"],
+                "latitude": 48.3180965,
+                "longitude": 7.3579641
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.3579641,
+                    48.0777517
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Camaret",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 48.2772747,
+                "longitude": -4.5968963
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.5968963,
+                    48.2772747
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Brest",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 48.3905283,
+                "longitude": -4.4860088
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.4860088,
+                    48.3905283
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Pentrez",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": ["france"],
+                "latitude": 48.19711268950324,
+                "longitude": -4.299046528204055
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.299046528204055,
+                    48.19711268950324
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Nantes",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": ["france"],
+                "latitude": 47.217099950405355,
+                "longitude": -1.5602154791608025
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.5602154791608025,
+                    47.217099950405355
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Lisbonne",
                 "nameascii": "Lisbonne",
-                "adm0name": "Portugal",
-                "adm0_a3": "Portugal",
                 "adm1name": "Lisbonne",
-                "iso_a2": "Portugal",
-                "note": null,
+                "note": ["world"],
                 "latitude": 38.7077507,
                 "longitude": -9.1365919
             },
@@ -52,16 +797,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Admin-0 capital",
                 "name": "New-York",
-                "nameascii": "New-York",
                 "adm0name": "USA",
-                "adm0_a3": "USA",
                 "adm1name": "New-York",
-                "iso_a2": "US",
-                "note": null,
+                "note": ["world"],
                 "latitude": -74.0060152,
                 "longitude": 40.7127281
             },
@@ -76,16 +815,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Populated place",
                 "name": "Grenoble",
-                "nameascii": "Grenoble",
                 "adm0name": "France",
-                "adm0_a3": "France",
                 "adm1name": "AuRA",
-                "iso_a2": "FR",
-                "note": null,
+                "note": ["world", "france"],
                 "latitude": 45.18960926152893,
                 "longitude": 5.758378565201219
             },
@@ -100,16 +833,46 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Populated place",
+                "name": "Lyon",
+                "adm0name": "France",
+                "adm1name": "AuRA",
+                "note": ["france"],
+                "latitude": 45.7578137,
+                "longitude": 4.8320114
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.8320114,
+                    45.7578137
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Val-Cenis",
+                "adm0name": "France",
+                "adm1name": "AuRA",
+                "note": ["france"],
+                "latitude": 45.2768658,
+                "longitude": 6.8170409
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.8170409,
+                    45.2768658
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Bath",
-                "nameascii": "Bath",
                 "adm0name": "Royaume-Uni",
-                "adm0_a3": "Royaume-Uni",
                 "adm1name": "Somerset",
-                "iso_a2": "UK",
-                "note": null,
+                "note": ["world"],
                 "latitude": -2.3902675870780454,
                 "longitude": 51.362712621105935
             },
@@ -124,16 +887,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Admin-1 capital",
-                "name": " ",
-                "nameascii": " ",
+                "name": "Québec",
                 "adm0name": "Canada",
-                "adm0_a3": "Canada",
                 "adm1name": "Québec",
-                "iso_a2": "CA",
-                "note": "Québéc",
+                "note": ["world", "canada"],
                 "latitude": -71.21238305619605,
                 "longitude": 46.810564282094596
             },
@@ -148,16 +905,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Admin-1 capital",
                 "name": "Halifax",
-                "nameascii": "Halifax",
                 "adm0name": "Canada",
-                "adm0_a3": "Canada",
                 "adm1name": "Nouvelle-Ecosse",
-                "iso_a2": "CA",
-                "note": null,
+                "note": ["world", "canada"],
                 "latitude": -63.57289981191113,
                 "longitude": 44.64571201869623
             },
@@ -172,16 +923,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Populated place",
                 "name": "Montréal",
-                "nameascii": "Montreal",
                 "adm0name": "Canada",
-                "adm0_a3": "Canada",
                 "adm1name": "Québec",
-                "iso_a2": "CA",
-                "note": null,
+                "note": ["world", "canada"],
                 "latitude": -73.62874807886477,
                 "longitude": 45.51015200931694
             },
@@ -196,16 +941,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Admin-0 capital",
-                "name": " ",
-                "nameascii": " ",
+                "name": "Ottawa",
                 "adm0name": "Canada",
-                "adm0_a3": "Canada",
                 "adm1name": "Ontario",
-                "iso_a2": "CA",
-                "note": "Ottawa",
+                "note": ["world", "canada"],
                 "latitude": -75.6901106,
                 "longitude": 45.4208777
             },
@@ -220,16 +959,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Populated place",
                 "name": "Vancouver",
-                "nameascii": "Vancouver",
                 "adm0name": "Canada",
-                "adm0_a3": "Canada",
                 "adm1name": "Colombie-Britannique",
-                "iso_a2": "CA",
-                "note": null,
+                "note": ["world", "canada"],
                 "latitude": -123.113952,
                 "longitude": 49.2608724
             },
@@ -244,16 +977,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Populated place",
                 "name": "Durrës",
-                "nameascii": "Durres",
                 "adm0name": "Albanie",
-                "adm0_a3": "Albanie",
                 "adm1name": "Albanie",
-                "iso_a2": "AL",
-                "note": null,
+                "note": ["world"],
                 "latitude": 19.4567926,
                 "longitude": 41.3310569
             },
@@ -268,16 +995,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Admin-0 capital",
                 "name": "Liège",
-                "nameascii": "Liege",
                 "adm0name": "Belgique",
-                "adm0_a3": "Belgique",
                 "adm1name": "Wallonie",
-                "iso_a2": "BE",
-                "note": null,
+                "note": ["world"],
                 "latitude": 5.540409047562425,
                 "longitude": 50.56612176957151
             },
@@ -292,16 +1013,10 @@
         {
             "type": "Feature",
             "properties": {
-                "scalerank": 0,
-                "labelrank": 1,
-                "featurecla": "Populated place",
                 "name": "Ourense",
-                "nameascii": "Ourense",
                 "adm0name": "Espagne",
-                "adm0_a3": "Espagne",
                 "adm1name": "Galice",
-                "iso_a2": "ES",
-                "note": null,
+                "note": ["world"],
                 "latitude": -7.868410044677718,
                 "longitude": 42.34331305541388
             },

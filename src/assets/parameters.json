@@ -3,6 +3,8 @@
     "livedCountries" : [56, 124, 250, 826],
     "visitedDepartements" : [17, 18, 22, 28, 29, 33, 37, 40, 41, 44, 49, 50, 53, 56, 59, 61, 67, 68, 69, 73, 76, 85, 91],
     "livedDepartements" : [14, 27, 35, 38, 75],
+    "livedProvs" : ["CA10"],
+    "visitedProvs" : ["CA02", "CA07", "CA08"],
     "flyer": {
         "altitude": 30
     },
