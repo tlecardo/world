@@ -7,22 +7,19 @@
 
 let params = require('./assets/parameters.json');
 
-var projection = d3
-    .geoOrthographic()
+var projection = d3.geoOrthographic()
     .scale(params.earth.size.radius)
     .rotate(params.earth.initRotation)
     .translate([params.offset.X, params.offset.Y])
     .clipAngle(90);
 
-var skyProjection = d3
-    .geoOrthographic()
+var skyProjection = d3.geoOrthographic()
     .scale(params.earth.size.radius + params.flyer.altitude)
     .rotate(params.earth.initRotation)
     .translate([params.offset.X, params.offset.Y])
     .clipAngle(90);
 
-var path = d3
-    .geoPath()
+var path = d3.geoPath()
     .projection(projection)
     .pointRadius(1.5);
 
@@ -91,7 +88,6 @@ d3.queue()
 
 function ready(error, france, canada, world, places, links) {
 
-    console.log(canada.features)
     provs.selectAll("path")
         .data(canada.features)
         .enter()
@@ -132,8 +128,7 @@ function ready(error, france, canada, world, places, links) {
                         "var(--lived-color)" : "var(--rest-color)");
         });
 
-    svg_w
-        .append("ellipse")
+    svg_w.append("ellipse")
         .attr("cx", params.offset.X - 40)
         .attr("cy", params.offset.Y + params.earth.size.radius - 20)
         .attr("rx", projection.scale() * 0.9)
@@ -141,44 +136,38 @@ function ready(error, france, canada, world, places, links) {
         .attr("class", "noclicks")
         .style("fill", "url(#drop_shadow)");
 
-    svg_w
-        .append("circle")
+    svg_w.append("circle")
         .attr("cx", params.offset.X)
         .attr("cy", params.offset.Y)
         .attr("r", projection.scale())
         .attr("class", "noclicks")
         .style("fill", "url(#ocean_fill)");
 
-    svg_w
-        .append("path")
+    svg_w.append("path")
         .datum(topojson.feature(world, world.objects.land))
         .attr("class", "land")
         .attr("d", path);
 
-    svg_w
-        .append("path")
+    svg_w.append("path")
         .datum(graticule)
         .attr("class", "graticule noclicks")
         .attr("d", path);
 
-    svg_w
-        .append("circle")
+    svg_w.append("circle")
         .attr("cx", params.offset.X)
         .attr("cy", params.offset.Y)
         .attr("r", projection.scale())
         .attr("class", "noclicks")
         .style("fill", "url(#globe_highlight)");
 
-    svg_w
-        .append("circle")
+    svg_w.append("circle")
         .attr("cx", params.offset.X)
         .attr("cy", params.offset.Y)
         .attr("r", projection.scale())
         .attr("class", "noclicks")
         .style("fill", "url(#globe_shading)");
 
-    svg_w
-        .append("g")
+    svg_w.append("g")
         .attr("class", "countries")
         .selectAll("path")
         .data(topojson.feature(world, world.objects.countries).features)
@@ -188,8 +177,6 @@ function ready(error, france, canada, world, places, links) {
         .attr("d", path)
         .style("fill", p => params.visitedCountries.includes(parseInt(p.id)) ? "var(--visited-color)" :
             params.livedCountries.includes(parseInt(p.id)) ? "var(--lived-color)" : "var(--rest-color)");
-
-
 
     svg_f.append("g")
         .attr("class", "points")
@@ -213,8 +200,7 @@ function ready(error, france, canada, world, places, links) {
         .attr("class", "point")
         .attr("d", path_c);
 
-    svg_w
-        .append("g")
+    svg_w.append("g")
         .attr("class", "points")
         .selectAll(".point")
         .data(places.features)
@@ -225,8 +211,7 @@ function ready(error, france, canada, world, places, links) {
         .attr("class", "point")
         .attr("d", path);
 
-    svg_w
-        .append("g")
+    svg_w.append("g")
         .attr("class", "labels")
         .selectAll(".label")
         .data(places.features)
@@ -326,8 +311,7 @@ function ready(error, france, canada, world, places, links) {
 function position_labels() {
     var centerPos = projection.invert([params.offset.X, params.offset.Y]);
 
-    svg_w
-        .selectAll(".label")
+    svg_w.selectAll(".label")
         .attr("text-anchor", function (d) {
             var x = projection(d.geometry.coordinates)[0];
             return x < params.offset.X - 20 ? "end" : x < params.offset.X + 20 ? "middle" : "start";
