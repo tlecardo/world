@@ -1,11 +1,5 @@
-// References: 
-// http://bl.ocks.org/dwtkns/4686432
-// http://bl.ocks.org/dwtkns/4973620
-// http://bl.ocks.org/KoGor/5994804
-// https://medium.com/@xiaoyangzhao/drawing-curves-on-webgl-globe-using-three-js-and-d3-draft-7e782ffd7ab
-// https://raw.githubusercontent.com/d3/d3.github.com/master/world-110m.v1.json
-
-let params = require('./assets/parameters.json');
+import * as franceSVG from './scripts/france.js';
+import params from './assets/parameters.json';
 
 var projection = d3.geoOrthographic()
     .scale(params.earth.size.radius)
@@ -108,25 +102,9 @@ function ready(error, france, canada, world, places, links) {
                         "var(--lived-color)" : "var(--rest-color)")
         });
 
-    deps.selectAll("path")
-        .data(france.features)
-        .enter()
-        .append("path")
-        .attr("id", p => "dep" + p.properties.code)
-        .attr("d", path_f)
-        .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ?
-            "var(--visited-color)" : params.livedDepartements.includes(parseInt(dep.properties.code)) ?
-                "var(--lived-color)" : "var(--rest-color)")
-        .on("mouseover", dep => {
-            svg_f.selectAll("#dep" + dep.properties.code)
-                .style("fill", "rgb(60, 60, 60)");
-        })
-        .on("mouseout", dep => {
-            svg_f.selectAll("#dep" + dep.properties.code)
-                .style("fill", dep => params.visitedDepartements.includes(parseInt(dep.properties.code)) ?
-                    "var(--visited-color)" : params.livedDepartements.includes(parseInt(dep.properties.code)) ?
-                        "var(--lived-color)" : "var(--rest-color)");
-        });
+
+    franceSVG.create(france.features, path_f, deps)
+    franceSVG.points(svg_f, path_f, places.features);
 
     svg_w.append("ellipse")
         .attr("cx", params.offset.X - 40)
@@ -177,17 +155,6 @@ function ready(error, france, canada, world, places, links) {
         .attr("d", path)
         .style("fill", p => params.visitedCountries.includes(parseInt(p.id)) ? "var(--visited-color)" :
             params.livedCountries.includes(parseInt(p.id)) ? "var(--lived-color)" : "var(--rest-color)");
-
-    svg_f.append("g")
-        .attr("class", "points")
-        .selectAll(".point")
-        .data(places.features)
-        .enter()
-        .filter(d => d.properties.note.includes("france"))
-        .append("path")
-        .attr("id", d => "pf" + d.properties.name)
-        .attr("class", "point")
-        .attr("d", path_f);
 
     svg_c.append("g")
         .attr("class", "points")
