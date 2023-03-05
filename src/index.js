@@ -1,4 +1,4 @@
-import * as franceSVG from './scripts/france.js';
+import Maps from './scripts/maps.js';
 import params from './assets/parameters.json';
 
 var projection = d3.geoOrthographic()
@@ -13,10 +13,6 @@ var skyProjection = d3.geoOrthographic()
     .translate([params.offset.X, params.offset.Y])
     .clipAngle(90);
 
-var path = d3.geoPath()
-    .projection(projection)
-    .pointRadius(1.5);
-
 var swoosh = d3.line()
     .x(function (d) { return d[0] })
     .y(function (d) { return d[1] })
@@ -24,38 +20,7 @@ var swoosh = d3.line()
 
 var graticule = d3.geoGraticule();
 
-const path_f = d3.geoPath();
-
-const projection_f = d3.geoConicConformal()
-    .center([2.454071, 46.279229])
-    .scale(3000)
-
-path_f.projection(projection_f);
-
-const svg_f = d3.select("svg#france")
-    .attr("width", "auto")
-    .attr("align-item", "center")
-
-const deps = svg_f.append("g");
-
-const path_c = d3.geoPath();
-
-const projection_c = d3.geoMercator()
-    .scale(450)
-    .rotate([96, -64.15]);
-
-path_c.projection(projection_c);
-
-const svg_c = d3.select("svg#canada")
-    .attr("width", "auto")
-    .attr("align-item", "center")
-
-const provs = svg_c.append("g");
-
-
 var svg_w = d3.select("svg#world")
-    .attr("width", "auto")
-    .attr("align-item", "center")
     .call(
         d3.drag()
             .subject(function () {
@@ -69,8 +34,34 @@ var svg_w = d3.select("svg#world")
             .zoom()
             .scaleExtent(params.earth.scaleExtent)
             .on("zoom", x => zoomed(svg_w, x))
-    )
-    .on("dblclick.zoom", null);
+    );
+
+
+const proj_f = d3.geoConicConformal()
+    .center([2.454071, 46.279229])
+    .scale(3000)
+
+const france = new Maps(d3.select("svg#france"));
+france.addProjection(proj_f)
+    .addPath(d3.geoPath())
+    .addHistoricData(params.visitedDepartements, params.livedDepartements);
+
+const proj_c = d3.geoMercator()
+    .scale(450)
+    .rotate([96, -64.15]);
+
+const canada = new Maps(d3.select("svg#canada"));
+canada.addProjection(proj_c)
+    .addPath(d3.geoPath())
+    .addHistoricData(params.visitedProvs, params.livedProvs);
+
+const world = new Maps(svg_w);
+world.addProjection(projection)
+    .addPath(d3.geoPath())
+    .addHistoricData(params.visitedCountries, params.livedCountries);
+
+const path = world.path.pointRadius(1.5);
+
 
 d3.queue()
     .defer(d3.json, "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson")
@@ -80,31 +71,17 @@ d3.queue()
     .defer(d3.json, "links.json")
     .await(ready);
 
-function ready(error, france, canada, world, places, links) {
+function ready(error, data_france, data_canada, data_world, places, links) {
 
-    provs.selectAll("path")
-        .data(canada.features)
-        .enter()
-        .append("path")
-        .attr("id", prov => "prov" + prov.properties.CODE)
-        .attr("d", path_c)
-        .style("fill", prov => params.visitedProvs.includes(prov.properties.CODE) ?
-            "var(--visited-color)" : params.livedProvs.includes(prov.properties.CODE) ?
-                "var(--lived-color)" : "var(--rest-color)")
-        .on("mouseover", prov => {
-            svg_c.selectAll("#prov" + prov.properties.CODE)
-                .style("fill", "rgb(60, 60, 60)");
-        })
-        .on("mouseout", prov => {
-            svg_c.selectAll("#prov" + prov.properties.CODE)
-                .style("fill", prov => params.visitedProvs.includes(prov.properties.CODE) ?
-                    "var(--visited-color)" : params.livedProvs.includes(prov.properties.CODE) ?
-                        "var(--lived-color)" : "var(--rest-color)")
-        });
+    france.addData(data_france.features);
+    france.drawData()
+    france.drawPoints("france", places.features);
 
-
-    franceSVG.create(france.features, path_f, deps)
-    franceSVG.points(svg_f, path_f, places.features);
+    canada.addData(data_canada.features);
+    canada.drawData()
+    canada.drawPoints("canada", places.features);
+    
+    world.addData(topojson.feature(data_world, data_world.objects.countries).features);
 
     svg_w.append("ellipse")
         .attr("cx", params.offset.X - 40)
@@ -122,7 +99,7 @@ function ready(error, france, canada, world, places, links) {
         .style("fill", "url(#ocean_fill)");
 
     svg_w.append("path")
-        .datum(topojson.feature(world, world.objects.land))
+        .datum(topojson.feature(data_world, data_world.objects.land))
         .attr("class", "land")
         .attr("d", path);
 
@@ -148,24 +125,13 @@ function ready(error, france, canada, world, places, links) {
     svg_w.append("g")
         .attr("class", "countries")
         .selectAll("path")
-        .data(topojson.feature(world, world.objects.countries).features)
+        .data(topojson.feature(data_world, data_world.objects.countries).features)
         .enter()
         .append("path")
         .attr("id", p => "c" + p.id)
         .attr("d", path)
-        .style("fill", p => params.visitedCountries.includes(parseInt(p.id)) ? "var(--visited-color)" :
-            params.livedCountries.includes(parseInt(p.id)) ? "var(--lived-color)" : "var(--rest-color)");
-
-    svg_c.append("g")
-        .attr("class", "points")
-        .selectAll(".point")
-        .data(places.features)
-        .enter()
-        .filter(d => d.properties.note.includes("canada"))
-        .append("path")
-        .attr("id", d => "pc" + d.properties.name)
-        .attr("class", "point")
-        .attr("d", path_c);
+        .style("fill", p => params.visitedCountries.includes(p.id) ? "var(--visited-color)" :
+            params.livedCountries.includes(p.id) ? "var(--lived-color)" : "var(--rest-color)");
 
     svg_w.append("g")
         .attr("class", "points")
@@ -265,14 +231,6 @@ function ready(error, france, canada, world, places, links) {
                 .style("font-weight", null)
 
         });
-
-    svg_w.selectAll("#c250").on("click", (d) => {
-        document.getElementById("france").scrollIntoView({ behavior: 'smooth' });
-    })
-
-    svg_w.selectAll("#c124").on("click", (d) => {
-        document.getElementById("canada").scrollIntoView({ behavior: 'smooth' });
-    })
 }
 
 function position_labels() {
@@ -314,8 +272,8 @@ function flying_arc(pts) {
 function fade_at_edge(d) {
     var centerPos = projection.invert([params.offset.X, params.offset.Y]);
 
-    start = d.geometry.coordinates[0];
-    end = d.geometry.coordinates[1];
+    let start = d.geometry.coordinates[0],
+        end = d.geometry.coordinates[1];
 
     var start_dist = 1.57 - d3.geoDistance(start, centerPos),
         end_dist = 1.57 - d3.geoDistance(end, centerPos);
