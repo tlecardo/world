@@ -176,7 +176,7 @@ function ready(error, data_france, data_canada, data_world, places, links) {
             return fade_at_edge(d)
         }).on("mouseover", (d) => {
 
-            d3.selectAll(".point")
+            d3.selectAll("svg#world.point")
                 .style("visibility", "hidden")
 
             d3.selectAll(".flyer")
@@ -190,10 +190,10 @@ function ready(error, data_france, data_canada, data_world, places, links) {
                 .style("stroke-width", 3)
                 .style("stroke", d => d.properties.transport === "plane" ? "blue" : "green") // selon params
 
-            d3.selectAll("#p" + d.properties.sourcename)
+            d3.selectAll("#pw" + d.properties.sourcename)
                 .style("visibility", "visible")
                 .style("fill", 'blue')  // selon params
-            d3.selectAll("#p" + d.properties.targetname)
+            d3.selectAll("#pw" + d.properties.targetname)
                 .style("visibility", "visible")
                 .style("fill", 'blue') // selon params
 
@@ -216,10 +216,10 @@ function ready(error, data_france, data_canada, data_world, places, links) {
                 .style("visibility", "visible")
                 .style("font-size", 6)
 
-            d3.selectAll("#p" + d.properties.sourcename)
+            d3.selectAll("#pw" + d.properties.sourcename)
                 .style("fill", null)   // selon params
 
-            d3.selectAll("#p" + d.properties.targetname)
+            d3.selectAll("#pw" + d.properties.targetname)
                 .style("fill", null)   // selon params
 
             d3.selectAll("#l" + d.properties.sourcename)

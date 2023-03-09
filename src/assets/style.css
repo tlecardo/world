@@ -129,6 +129,16 @@ svg {
   fill: none;
 }
 
+.tooltip {
+  padding: 2px;
+  border: 2px solid;
+  border-radius: 8px;
+  background-color: white;
+  position: absolute;
+  font-family: Arial Black;
+  font-size: 15px;
+}
+
 .arc {}
 
 .flyer {}
