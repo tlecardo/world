@@ -2,8 +2,8 @@
     "name": "travel",
     "version": "1.0.0",
     "description": "Visualisation de mes voyages",
-    "main": "src/index.js",
-    // "type": "module",
+    "main": "./src/index.js",
+    "type": "module",
     "scripts": {
         "build": "parcel build ./index.html",
         "start": "parcel ./index.html --log-level=2 --port=8080",
@@ -13,10 +13,10 @@
     "license": "UNLICENSED",
     "dependencies": {
         "d3": "^7.6.1",
-        "d3-svg-legend": "^2.25.6",
+        "d3-svg-legend": "^1.13.0",
         "d3-tip": "^0.9.1",
-        "parcel-bundler": "^1.12.4",
-        "parcel-plugin-static-files-copy": "^2.4.3",
+        "parcel-bundler": "^1.8.1",
+        "parcel-plugin-static-files-copy": "^1.2.4",
         "test.js": "^1.0.0"
     },
     "devDependencies": {
