@@ -74,15 +74,19 @@ export default class Maps {
             .attr("d", this.path)
             .on("mouseover", function(e){
 
+                const toolTipContent = 
+                `<div class="tip city">${e.properties.name}</div>` +
+                `<div class="tip region">${e.properties.adm1name}</div>`
+
                 console.log(e)
                 d3.select(this).style("fill", "blue")
 
                 d3.select("#c" + keyword)
                     .append("text")
                     .attr("class", "tooltip")
-                    .style('left', (d3.event.pageX+10) + 'px')
-                    .style('top', (d3.event.pageY+10) + 'px')
-                    .text(e.properties.name);
+                    .style('left', (d3.event.pageX + 10) + 'px')
+                    .style('top', (d3.event.pageY + 10) + 'px')
+                    .html(toolTipContent);
 
             })
             .on("mouseout", function(){

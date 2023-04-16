@@ -135,8 +135,20 @@ svg {
   border-radius: 8px;
   background-color: white;
   position: absolute;
+}
+
+.tip {
+  text-align: center;
+}
+
+.tip.city {
   font-family: Arial Black;
   font-size: 15px;
+}
+
+.tip.region {
+  font-family: Arial Black;
+  font-size: 12px;
 }
 
 .arc {}
