@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Visualisation de mes voyages",
     "main": "src/index.js",
-    "type": "module",
+    // "type": "module",
     "scripts": {
         "build": "parcel build ./index.html",
         "start": "parcel ./index.html --log-level=2 --port=8080",
