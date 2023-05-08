@@ -888,6 +888,24 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Miami",
+                "adm0name": "USA",
+                "adm1name": "Floride",
+                "note": [
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.19362,
+                    25.7741728
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Grenoble",
                 "adm0name": "France",
                 "adm1name": "AuRA",

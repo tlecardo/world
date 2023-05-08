@@ -210,6 +210,27 @@
                     ]
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Montréal",
+                "targetname": "Miami",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.62874807886477,
+                        45.51015200931694
+                    ],
+                    [
+                        -80.19362,
+                        25.7741728
+                    ]
+                ]
+            }
         }
     ]
 }
