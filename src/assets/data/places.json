@@ -1016,6 +1016,46 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Le Poisson Blanc",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "world",
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.68271102731445,
+                    46.12361743407657
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "ZEC Jeannotte",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "world",
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.2208785,
+                    47.3857015
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Montréal",
                 "adm0name": "Canada",
                 "adm1name": "Québec",

@@ -62,25 +62,43 @@ world.addProjection(projection)
 
 const path = world.path.pointRadius(1.5);
 
-
+/*
+Promise.all([
+    d3.json('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson'),
+    //d3.json('https://raw.githubusercontent.com/wisdomtheif/Canadian_GeoJSON/master/canada_provinces.geojson'),
+    //d3.json('https://raw.githubusercontent.com/d3/d3.github.com/master/world-110m.v1.json'),
+    //d3.json('places.json'),
+    //d3.json('links.json')
+]).then((values) => {
+    console.log(values);
+});
+    ([data_france, data_canada, data_world, places, links]) => {
+        console.log(data_france);
+        console.log(data_canada);
+        console.log(data_world);
+        console.log(places);
+        console.log(links);
+        ready(data_france, data_canada, data_world, places, links);
+    });
+*/  
 d3.queue()
     .defer(d3.json, "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson")
     .defer(d3.json, "https://raw.githubusercontent.com/wisdomtheif/Canadian_GeoJSON/master/canada_provinces.geojson")
     .defer(d3.json, "https://raw.githubusercontent.com/d3/d3.github.com/master/world-110m.v1.json")
-    .defer(d3.json, "places.json")
-    .defer(d3.json, "links.json")
     .await(ready);
 
-function ready(error, data_france, data_canada, data_world, places, links) {
+function ready(error, data_france, data_canada, data_world) {
+    var places = require('./assets/data/places.json');
+    var links = require('./assets/data/links.json');
 
     france.addData(data_france.features);
     france.drawData()
-    france.drawPoints("france", places.features);
+    france.drawPoints("france", places.features, 3.5);
 
     canada.addData(data_canada.features);
     canada.drawData()
-    canada.drawPoints("canada", places.features);
-    
+    canada.drawPoints("canada", places.features, 3.5);
+
     world.addData(topojson.feature(data_world, data_world.objects.countries).features);
 
     svg_w.append("ellipse")

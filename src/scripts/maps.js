@@ -7,6 +7,14 @@ export default class Maps {
         this.divisions = this.svg.append("g");
     }
 
+    extractX(path) {
+        return path.split(",")[0].slice(1);
+    }
+
+    extractY(path) {
+        return path.split(",")[1].split("m")[0];
+    }
+
     addHistoricData(visitedDivs, livedDivs) {
         this.visitedDivs = visitedDivs;
         this.livedDivs = livedDivs;
@@ -58,7 +66,10 @@ export default class Maps {
             });
     }
 
-    drawPoints(keyword, places) {
+    drawPoints(keyword, places, radius) {
+
+        console.log("X ", this.extractX(this.path(this.data[0])))
+        console.log("Y ", this.extractY(this.path(this.data[0])))
 
         let svg = this.svg
 
@@ -68,18 +79,20 @@ export default class Maps {
             .data(places)
             .enter()
             .filter(d => d.properties.note.includes(keyword))
-            .append("path")
+            .append("circle")
+            .attr("cx", c => this.extractX(this.path(c)))
+            .attr("cy", c => this.extractY(this.path(c)))
+            .attr("r", radius)
             .attr("id", d => "p" + keyword[0] + d.properties.name)
             .attr("class", "point")
-            .attr("d", this.path)
             .on("mouseover", function(e){
 
                 const toolTipContent = 
                 `<div class="tip city">${e.properties.name}</div>` +
                 `<div class="tip region">${e.properties.adm1name}</div>`
 
-                console.log(e)
-                d3.select(this).style("fill", "blue")
+                d3.select(this).style("fill", e.properties.note.includes("parc") ? "green": "blue");
+
 
                 d3.select("#c" + keyword)
                     .append("text")
