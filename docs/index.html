@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>World travel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 
   <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
@@ -16,8 +18,13 @@
 <body>
 
   <div class="conteneur">
-    <div id="title">Ceci est le titre</div>
-    <div id="text_w">Legende de la carte World</div>
+    <div id="title">
+      <div class="maintitle">Voyages & tourisme</div>
+      <div class="subtitle">par Théo.L</div>
+    </div>
+    <div id="text_w">
+      <div class="maintitle">Des voyages transatlantiques</div>
+    </div>
     <div id="cworld">
       <svg id="world" viewBox="0 0 600 600">
         <defs>
@@ -40,13 +47,17 @@
         </defs>
       </svg>
     </div>
-    <div id="sep1">Séparateur1</div>
-    <div id="text_f">Legende de la carte France</div>
+    <div id="sep1"></div>
+    <div id="text_f">
+      <div class="maintitle">En France ...</div>
+    </div>
     <div id="cfrance">
       <svg id="france" viewBox="200 -20 500 500"></svg>
     </div>
-    <div id="sep2">Séparateur2</div>
-    <div id="text_c">Legende de la carte Canada</div>
+    <div id="sep2"></div>
+    <div id="text_c">
+      <div class="maintitle">... et au Canada</div>
+    </div>
     <div id="ccanada">
       <svg id="canada" viewBox="310 90 400 400"></svg>
     </div>

@@ -51,7 +51,8 @@ export default class Maps {
                 "var(--visited-color)" : lived.includes(divBis.properties.code) ?
                     "var(--lived-color)" : "var(--rest-color)")
             .on("mouseover", function(){
-                d3.select(this).style("fill", "rgb(60, 60, 60)");
+                d3.select(this).style("fill", "rgb(60, 60, 60)")
+                            .style("cursor", "crosshair");
             })
             .on("mouseout", function(){
                 d3.select(this).style("fill", divBis => visited.includes(divBis.properties.code) ?
@@ -82,8 +83,8 @@ export default class Maps {
                 `<div class="tip city">${e.properties.name}</div>` +
                 `<div class="tip region">${e.properties.adm1name}</div>`
 
-                d3.select(this).style("fill", e.properties.note.includes("parc") ? "green": "blue");
-
+                d3.select(this).style("fill", e.properties.note.includes("parc") ? "green": "blue")
+                                .style("cursor", "crosshair");
 
                 d3.select("#c" + keyword)
                     .append("text")

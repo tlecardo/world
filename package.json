@@ -6,17 +6,14 @@
     "type": "module",
     "scripts": {
         "build": "parcel build ./docs/index.html",
-        "start": "parcel ./docs/index.html --log-level=2 --port=8080",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "parcel ./docs/index.html --log-level=2 --port=8080"
     },
     "author": "Théo LECARDONNEL",
     "license": "UNLICENSED",
     "dependencies": {
         "d3": "^7.6.1",
-        "d3-tip": "^0.9.1",
         "parcel-bundler": "^1.8.1",
-        "parcel-plugin-static-files-copy": "^1.2.4",
-        "test.js": "^1.0.0"
+        "parcel-plugin-static-files-copy": "^1.2.4"
     },
     "devDependencies": {
         "eslint": "^7.4.0",
