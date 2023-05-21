@@ -1,5 +1,6 @@
 import Maps from './scripts/maps.js';
-import params from './assets/parameters.json';
+
+var params = require('./assets/parameters.json');
 
 var projection = d3.geoOrthographic()
     .scale(params.earth.size.radius)
