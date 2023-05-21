@@ -2,11 +2,11 @@
     "name": "travel",
     "version": "1.0.0",
     "description": "Visualisation de mes voyages",
-    "main": "./src/index.js",
+    "main": "./docs/index.js",
     "type": "module",
     "scripts": {
-        "build": "parcel build ./index.html",
-        "start": "parcel ./index.html --log-level=2 --port=8080",
+        "build": "parcel build ./docs/index.html",
+        "start": "parcel ./docs/index.html --log-level=2 --port=8080",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Théo LECARDONNEL",
@@ -31,7 +31,7 @@
     },
     "staticFiles": {
         "staticPath": [
-            "./src/assets/data"
+            "./docs/assets/data"
         ]
     }
 }

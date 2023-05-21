@@ -7,14 +7,6 @@ export default class Maps {
         this.divisions = this.svg.append("g");
     }
 
-    extractX(path) {
-        return path.split(",")[0].slice(1);
-    }
-
-    extractY(path) {
-        return path.split(",")[1].split("m")[0];
-    }
-
     addHistoricData(visitedDivs, livedDivs) {
         this.visitedDivs = visitedDivs;
         this.livedDivs = livedDivs;
@@ -29,6 +21,8 @@ export default class Maps {
     addPath(path) {
         this.path = path;
         this.path.projection(this.projection)
+        this.Xproj = (x) => this.path(x).split(",")[0].slice(1);
+        this.Yproj = (x) => this.path(x).split(",")[1].split("m")[0]
         return this;
     }
 
@@ -68,9 +62,6 @@ export default class Maps {
 
     drawPoints(keyword, places, radius) {
 
-        console.log("X ", this.extractX(this.path(this.data[0])))
-        console.log("Y ", this.extractY(this.path(this.data[0])))
-
         let svg = this.svg
 
         svg.append("g")
@@ -80,8 +71,8 @@ export default class Maps {
             .enter()
             .filter(d => d.properties.note.includes(keyword))
             .append("circle")
-            .attr("cx", c => this.extractX(this.path(c)))
-            .attr("cy", c => this.extractY(this.path(c)))
+            .attr("cx", this.Xproj)
+            .attr("cy", this.Yproj)
             .attr("r", radius)
             .attr("id", d => "p" + keyword[0] + d.properties.name)
             .attr("class", "point")
