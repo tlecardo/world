@@ -61,26 +61,7 @@ world.addProjection(projection)
     .addHistoricData(params.visitedCountries, params.livedCountries);
 
 const path = world.path.pointRadius(1.5);
-
-/*
-Promise.all([
-    d3.json('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson'),
-    //d3.json('https://raw.githubusercontent.com/wisdomtheif/Canadian_GeoJSON/master/canada_provinces.geojson'),
-    //d3.json('https://raw.githubusercontent.com/d3/d3.github.com/master/world-110m.v1.json'),
-    //d3.json('places.json'),
-    //d3.json('links.json')
-]).then((values) => {
-    console.log(values);
-});
-    ([data_france, data_canada, data_world, places, links]) => {
-        console.log(data_france);
-        console.log(data_canada);
-        console.log(data_world);
-        console.log(places);
-        console.log(links);
-        ready(data_france, data_canada, data_world, places, links);
-    });
-*/  
+ 
 d3.queue()
     .defer(d3.json, "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson")
     .defer(d3.json, "https://raw.githubusercontent.com/wisdomtheif/Canadian_GeoJSON/master/canada_provinces.geojson")

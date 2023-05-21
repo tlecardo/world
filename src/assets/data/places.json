@@ -1020,7 +1020,6 @@
                 "adm0name": "Canada",
                 "adm1name": "Québec",
                 "note": [
-                    "world",
                     "canada",
                     "parc"
                 ]
@@ -1040,7 +1039,6 @@
                 "adm0name": "Canada",
                 "adm1name": "Québec",
                 "note": [
-                    "world",
                     "canada",
                     "parc"
                 ]
@@ -1134,14 +1132,105 @@
                 "adm0name": "Belgique",
                 "adm1name": "Wallonie",
                 "note": [
-                    "world"
+                    "world",
+                    "france"
                 ]
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    5.540409047562425,
-                    50.56612176957151
+                    5.5404090,
+                    50.566121
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bruxelles",
+                "adm0name": "Belgique",
+                "adm1name": "Bruxelles-Capitale",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.352507,
+                    50.846648
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Anvers",
+                "adm0name": "Belgique",
+                "adm1name": "Flandres",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.398843,
+                    51.221167
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ostende",
+                "adm0name": "Belgique",
+                "adm1name": "Flandres",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.909609,
+                    51.231360
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Aix-la-Chapelle",
+                "adm0name": "Allemagne",
+                "adm1name": "Rh.-du-Nord-Wes.",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.0830756,
+                    50.7738374
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Maastricht",
+                "adm0name": "Pays-Bas",
+                "adm1name": "Limbourg",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.690621,
+                    50.850082
                 ]
             }
         },
