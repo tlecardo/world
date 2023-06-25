@@ -1,7 +1,7 @@
 :root {
-  --visited-color: rgb(146, 146, 146);
-  --lived-color: rgb(97, 97, 97);
-  --rest-color: rgb(184, 184, 184);
+  --visited-color: rgba(219, 173, 106, .8);
+  --lived-color: rgb(207, 153, 95, .8);
+  --rest-color: rgb(223, 213, 165, .8);
 }
 
 .conteneur {
@@ -23,20 +23,18 @@
 
 #title .maintitle {
   font-size: 60pt;
-  color: var(--lived-color);
   text-align: center;
 }
 
 #title .subtitle {
   font-size: 20pt;
   margin-left: 30%; 
-  color: var(--visited-color);
   text-align: center;
 }
 
 #text_c, #text_w, #text_f .maintitle {
   font-size: 30pt;
-  color: var(--lived-color);
+  color: rgb(150, 137, 123);
   text-align: center;
 }
 
@@ -117,8 +115,8 @@ svg {
 }
 
 .labels {
-  font: 6px sans-serif;
-  fill: rgba(0, 0, 0, 0.4);
+  font: 6px Baskervville;
+  fill: rgba(0, 0, 0, .9);
 }
 
 .noclicks {
@@ -164,9 +162,9 @@ svg {
 }
 
 .tip.city {
-  font-weight: 800;
-  font-family: Baskervville Black;
-  font-size: 18px;
+  font-weight: 100;
+  font-family: 'Bebas Neue';
+  font-size: 25px;
 }
 
 .tip.region {

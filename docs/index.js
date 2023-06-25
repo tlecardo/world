@@ -155,6 +155,7 @@ fetch('https://raw.githubusercontent.com/tlecardo/world/main/docs/assets/paramet
                 .append("text")
                 .attr("class", "label")
                 .attr("id", d => "l" + d.properties.name)
+                .style("font-weight", 300)
                 .text(d => d.properties.name);
 
             position_labels();
@@ -202,11 +203,11 @@ fetch('https://raw.githubusercontent.com/tlecardo/world/main/docs/assets/paramet
                     d3.selectAll("#l" + d.properties.sourcename)
                         .style("visibility", "visible")
                         .style("font-size", 10)
-                        .style("font-weight", "bold")
+                        .style("font-weight", 900)
                     d3.selectAll("#l" + d.properties.targetname)
                         .style("visibility", "visible")
                         .style("font-size", 10)
-                        .style("font-weight", "bold")
+                        .style("font-weight", 900)
 
                 }).on("mouseout", (d) => {
 
@@ -220,17 +221,15 @@ fetch('https://raw.githubusercontent.com/tlecardo/world/main/docs/assets/paramet
 
                     d3.selectAll("#pw" + d.properties.sourcename)
                         .style("fill", null)   // selon params
-
                     d3.selectAll("#pw" + d.properties.targetname)
                         .style("fill", null)   // selon params
 
                     d3.selectAll("#l" + d.properties.sourcename)
                         .style("font-size", 6)
-                        .style("font-weight", null)
-
+                        .style("font-weight", 300)
                     d3.selectAll("#l" + d.properties.targetname)
                         .style("font-size", 6)
-                        .style("font-weight", null)
+                        .style("font-weight", 300)
 
                 });
         }
