@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
+  --lived-color: rgba(207, 153, 95, .8);
   --visited-color: rgba(219, 173, 106, .8);
-  --lived-color: rgb(207, 153, 95, .8);
-  --rest-color: rgb(223, 213, 165, .8);
+  --rest-color: rgba(223, 213, 165, .8);
 }
 
 .conteneur {

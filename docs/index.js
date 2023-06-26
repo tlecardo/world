@@ -124,6 +124,9 @@ fetch('https://raw.githubusercontent.com/tlecardo/world/main/docs/assets/paramet
                 .attr("class", "noclicks")
                 .style("fill", "url(#globe_shading)");
 
+
+            let strip = "linear-gradient(103deg, #F6F0CF 25%, #fff 25%, #fff 50%, #F6F0CF 50%, #F6F0CF 75%, #fff 75%, #fff 100%)"
+
             svg_w.append("g")
                 .attr("class", "countries")
                 .selectAll("path")
@@ -132,8 +135,7 @@ fetch('https://raw.githubusercontent.com/tlecardo/world/main/docs/assets/paramet
                 .append("path")
                 .attr("id", p => "c" + p.id)
                 .attr("d", path)
-                .style("fill", p => params.visitedCountries.includes(p.id) ? "var(--visited-color)" :
-                    params.livedCountries.includes(p.id) ? "var(--lived-color)" : "var(--rest-color)");
+                .style("fill", p => params.visitedCountries.includes(p.id) ? "var(--visited-color)" : params.livedCountries.includes(p.id) ? "var(--lived-color)" : "var(--rest-color)")
 
             svg_w.append("g")
                 .attr("class", "points")
