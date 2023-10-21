@@ -42,7 +42,7 @@ fetch('https://raw.githubusercontent.com/tlecardo/world/main/docs/assets/paramet
 
         const proj_f = d3.geoConicConformal()
             .center([2.454071, 46.279229])
-            .scale(2800)
+            .scale(2000)
 
         const france = new Maps(d3.select("svg#france"));
         france.addProjection(proj_f)
