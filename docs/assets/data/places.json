@@ -581,6 +581,62 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Carcassonne",
+                "adm0name": "France",
+                "adm1name": "Occitanie",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.35109817,
+                    43.2183370
+                ]
+            }
+        },
+
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Latour-de-Carol",
+                "adm0name": "France",
+                "adm1name": "Occitanie",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.90476667,
+                    42.4590910
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Toulouse",
+                "adm0name": "France",
+                "adm1name": "Occitanie",
+                "note": [
+                    "france",
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.4540230,
+                    43.6121498
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "La Rochelle",
                 "adm0name": "France",
                 "adm1name": "Occitanie",
@@ -978,24 +1034,6 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Miami",
-                "adm0name": "USA",
-                "adm1name": "Floride",
-                "note": [
-                    "world"
-                ]
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -80.19362,
-                    25.7741728
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "name": "Grenoble",
                 "adm0name": "France",
                 "adm1name": "AuRA",
@@ -1181,25 +1219,6 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Vancouver",
-                "adm0name": "Canada",
-                "adm1name": "Colombie-Britannique",
-                "note": [
-                    "world",
-                    "canada"
-                ]
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -123.113952,
-                    49.2608724
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "name": "Durrës",
                 "adm0name": "Albanie",
                 "adm1name": "Albanie",
@@ -1321,6 +1340,25 @@
                 "coordinates": [
                     5.690621,
                     50.850082
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Barcelone",
+                "adm0name": "Espagne",
+                "adm1name": "Catalogne",
+                "note": [
+                    "france",
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.1774322,
+                    41.3828939
                 ]
             }
         },
