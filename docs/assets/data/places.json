@@ -1163,7 +1163,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "ZEC Jeannotte",
+                "name": "Les Escoumins",
                 "adm0name": "Canada",
                 "adm1name": "Québec",
                 "note": [
@@ -1174,8 +1174,45 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -72.2208785,
-                    47.3857015
+                    -69.407657,
+                    48.3424900
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Métabetchouan",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.8709316,
+                    48.4287002
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Parc de la Mauricie",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.9684688,
+                    46.81182679
                 ]
             }
         },
@@ -1350,7 +1387,6 @@
                 "adm0name": "Espagne",
                 "adm1name": "Catalogne",
                 "note": [
-                    "france",
                     "world"
                 ]
             },

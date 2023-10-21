@@ -6,12 +6,13 @@
     "type": "module",
     "scripts": {
         "build": "parcel build ./docs/index.html",
-        "start": "parcel ./docs/index.html --log-level=2 --port=8080"
+        "start": "parcel ./docs/index.html --port=8080"
     },
     "author": "Théo LECARDONNEL",
     "license": "UNLICENSED",
     "dependencies": {
         "d3": "^7.6.1",
+        "parcel": "^2.10.0",
         "parcel-bundler": "^1.8.1",
         "parcel-plugin-static-files-copy": "^1.2.4"
     },

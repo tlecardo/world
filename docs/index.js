@@ -42,7 +42,7 @@ fetch('https://raw.githubusercontent.com/tlecardo/world/main/docs/assets/paramet
 
         const proj_f = d3.geoConicConformal()
             .center([2.454071, 46.279229])
-            .scale(2000)
+            .scale(2800)
 
         const france = new Maps(d3.select("svg#france"));
         france.addProjection(proj_f)
@@ -81,7 +81,7 @@ fetch('https://raw.githubusercontent.com/tlecardo/world/main/docs/assets/paramet
 
             canada.addData(data_canada.features);
             canada.drawData()
-            canada.drawPoints("canada", places.features, 3);
+            canada.drawPoints("canada", places.features, 2.5);
 
             world.addData(topojson.feature(data_world, data_world.objects.countries).features);
 
