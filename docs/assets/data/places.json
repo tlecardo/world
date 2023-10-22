@@ -1256,6 +1256,42 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Toronto",
+                "adm0name": "Canada",
+                "adm1name": "Ontario",
+                "note": [
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.3839347,
+                    43.6534817
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Niagara Falls",
+                "adm0name": "Canada",
+                "adm1name": "Ontario",
+                "note": [
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.0646991,
+                    43.1092102
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Durrës",
                 "adm0name": "Albanie",
                 "adm1name": "Albanie",
