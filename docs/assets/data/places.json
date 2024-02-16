@@ -239,6 +239,24 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Rouen",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.091107,
+                    49.437090
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Aubevoye",
                 "adm0name": "France",
                 "adm1name": "Normandie",
@@ -251,6 +269,42 @@
                 "coordinates": [
                     1.3331944,
                     49.177214
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mortagne-au-Perche",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.546929,
+                    48.521467
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mont-Saint-Michel",
+                "adm0name": "France",
+                "adm1name": "Normandie",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.510962,
+                    48.635463
                 ]
             }
         },
@@ -341,6 +395,42 @@
                 "coordinates": [
                     -1.6800198,
                     48.1113387
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Douarnenez",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.333262,
+                    48.089853
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lorient",
+                "adm0name": "France",
+                "adm1name": "Bretagne",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.360929,
+                    47.745383
                 ]
             }
         },
@@ -521,6 +611,24 @@
                 "coordinates": [
                     0.0923351,
                     47.497443
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Angers",
+                "adm0name": "France",
+                "adm1name": "Pays-de-la-Loire",
+                "note": [
+                    "france"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.552060,
+                    47.470321
                 ]
             }
         },
