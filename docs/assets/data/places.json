@@ -1278,7 +1278,8 @@
                 "adm0name": "Canada",
                 "adm1name": "Ontario",
                 "note": [
-                    "canada"
+                    "canada",
+                    "world"
                 ]
             },
             "geometry": {
@@ -1286,24 +1287,6 @@
                 "coordinates": [
                     -79.0646991,
                     43.1092102
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "Durrës",
-                "adm0name": "Albanie",
-                "adm1name": "Albanie",
-                "note": [
-                    "world"
-                ]
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    19.4567926,
-                    41.3310569
                 ]
             }
         },

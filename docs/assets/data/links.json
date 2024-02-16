@@ -215,6 +215,27 @@
             "type": "Feature",
             "properties": {
                 "sourcename": "Montréal",
+                "targetname": "Toronto",
+                "transport": "train"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.62874807886477,
+                        45.51015200931694
+                    ],
+                    [
+                        -79.3839347,
+                        43.6534817
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Montréal",
                 "targetname": "Halifax",
                 "transport": "plane"
             },
