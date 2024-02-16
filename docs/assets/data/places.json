@@ -1260,7 +1260,8 @@
                 "adm0name": "Canada",
                 "adm1name": "Ontario",
                 "note": [
-                    "canada"
+                    "canada",
+                    "world"
                 ]
             },
             "geometry": {
@@ -1278,8 +1279,7 @@
                 "adm0name": "Canada",
                 "adm1name": "Ontario",
                 "note": [
-                    "canada",
-                    "world"
+                    "canada"
                 ]
             },
             "geometry": {
