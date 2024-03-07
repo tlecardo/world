@@ -1143,11 +1143,10 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Loon Lake",
+                "name": "Adirondack park",
                 "adm0name": "USA",
                 "adm1name": "New-York",
                 "note": [
-                    "world",
                     "canada",
                     "parc"
                 ]
@@ -1181,7 +1180,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Frontenac",
+                "name": "Frontenac park",
                 "adm0name": "Canada",
                 "adm1name": "Ontario",
                 "note": [
