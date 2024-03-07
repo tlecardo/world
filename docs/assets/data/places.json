@@ -1143,6 +1143,24 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Fort Drum",
+                "adm0name": "USA",
+                "adm1name": "New-York",
+                "note": [
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.837294,
+                    44.045912
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Adirondack park",
                 "adm0name": "USA",
                 "adm1name": "New-York",
