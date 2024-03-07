@@ -1128,7 +1128,8 @@
                 "adm0name": "USA",
                 "adm1name": "New-York",
                 "note": [
-                    "world"
+                    "world",
+                    "canada"
                 ]
             },
             "geometry": {
@@ -1136,6 +1137,63 @@
                 "coordinates": [
                     -74.0060152,
                     40.7127281
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Loon Lake",
+                "adm0name": "USA",
+                "adm1name": "New-York",
+                "note": [
+                    "world",
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.1548463,
+                    44.5576348
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kingston",
+                "adm0name": "Canada",
+                "adm1name": "Ontario",
+                "note": [
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.486479,
+                    44.232751
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Frontenac",
+                "adm0name": "Canada",
+                "adm1name": "Ontario",
+                "note": [
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.518271,
+                    44.531105
                 ]
             }
         },
