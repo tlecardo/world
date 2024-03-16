@@ -1143,6 +1143,43 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Boston",
+                "adm0name": "USA",
+                "adm1name": "Massachusetts",
+                "note": [
+                    "world",
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.055220,
+                    42.3678523
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Providence",
+                "adm0name": "USA",
+                "adm1name": "Rhode Island",
+                "note": [
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.414965,
+                    41.830745
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Fort Drum",
                 "adm0name": "USA",
                 "adm1name": "New-York",
