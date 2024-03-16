@@ -1162,6 +1162,24 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Albany",
+                "adm0name": "USA",
+                "adm1name": "New-York",
+                "note": [
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.757163,
+                    42.652570
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Providence",
                 "adm0name": "USA",
                 "adm1name": "Rhode Island",
