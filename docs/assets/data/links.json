@@ -256,6 +256,48 @@
         {
             "type": "Feature",
             "properties": {
+                "sourcename": "Miami",
+                "targetname": "San Juan",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -80.192046,
+                        25.777872
+                    ],
+                    [
+                        -66.114981,
+                        18.465374
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Montréal",
+                "targetname": "Miami",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -73.62874807886477,
+                        45.51015200931694
+                    ],
+                    [
+                        -80.192046,
+                        25.777872
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "sourcename": "Montréal",
                 "targetname": "Halifax",
                 "transport": "plane"

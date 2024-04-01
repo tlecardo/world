@@ -1124,6 +1124,42 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Miami",
+                "adm0name": "USA",
+                "adm1name": "Floride",
+                "note": [
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.192046,
+                    25.777872
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "San Juan",
+                "adm0name": "USA",
+                "adm1name": "Puerto Rico",
+                "note": [
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.114981,
+                    18.465374
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "New-York",
                 "adm0name": "USA",
                 "adm1name": "New-York",
