@@ -1381,6 +1381,25 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Mont Foster",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.397975,
+                    45.229918
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Québec",
                 "adm0name": "Canada",
                 "adm1name": "Québec",
