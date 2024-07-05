@@ -257,7 +257,7 @@
             "type": "Feature",
             "properties": {
                 "sourcename": "Miami",
-                "targetname": "San Juan",
+                "targetname": "SanJuan",
                 "transport": "plane"
             },
             "geometry": {
