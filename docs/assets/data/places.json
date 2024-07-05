@@ -4,6 +4,24 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Reykjavik",
+                "adm0name": "Islande",
+                "adm1name": "Capital Region",
+                "note": [
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -21.960435,
+                    64.1450035
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Caen",
                 "adm0name": "France",
                 "adm1name": "Normandie",
@@ -1375,25 +1393,6 @@
                 "coordinates": [
                     -2.3902675870780454,
                     51.362712621105935
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "Mont Foster",
-                "adm0name": "Canada",
-                "adm1name": "Québec",
-                "note": [
-                    "canada",
-                    "parc"
-                ]
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -72.397975,
-                    45.229918
                 ]
             }
         },

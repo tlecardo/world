@@ -336,6 +336,48 @@
                     ]
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Toronto",
+                "targetname": "Reykjavik",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -79.3839347,
+                        43.6534817
+                    ],
+                    [
+                        -21.960435,
+                        64.1450035
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "sourcename": "Reykjavik",
+                "targetname": "Caen",
+                "transport": "plane"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -21.960435,
+                        64.1450035
+                    ],
+                    [
+                        -0.3333103,
+                        49.1562239
+                    ]
+                ]
+            }
         }
     ]
 }
