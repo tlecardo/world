@@ -1492,6 +1492,63 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Parc de la Jacques-Cartier",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.3592051,
+                    47.13215944
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Parc du Fjord-du-Saguenay",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.9436259,
+                    48.26339414
+                ]
+            }
+        },    
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Parc des Grands Jardins",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -70.7237894,
+                    47.73348491
+                ]
+            }
+        },     
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Parc de la Mauricie",
                 "adm0name": "Canada",
                 "adm1name": "Québec",
