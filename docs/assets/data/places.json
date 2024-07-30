@@ -1492,6 +1492,25 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Parc du Mt-Tremblant",
+                "adm0name": "Canada",
+                "adm1name": "Québec",
+                "note": [
+                    "canada",
+                    "parc"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.4242,
+                    46.7745278
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Parc de la Jacques-Cartier",
                 "adm0name": "Canada",
                 "adm1name": "Québec",
