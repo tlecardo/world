@@ -1197,6 +1197,135 @@
         {
             "type": "Feature",
             "properties": {
+                "name": "Chicago",
+                "adm0name": "USA",
+                "adm1name": "Illinois",
+                "note": [
+                    "world",
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.630191,
+                    41.881759
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Seattle",
+                "adm0name": "USA",
+                "adm1name": "Washington",
+                "note": [
+                    "world",
+                    "canada"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.333224,
+                    47.603172
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "San_Francisco",
+                "adm0name": "USA",
+                "adm1name": "Californie",
+                "note": [
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.405625,
+                    37.780828
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Los_Angeles",
+                "adm0name": "USA",
+                "adm1name": "Californie",
+                "note": [
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.234540,
+                    34.055156
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "El_Paso",
+                "adm0name": "USA",
+                "adm1name": "Texas",
+                "note": [
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -106.495338,
+                    31.758231
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "New_Orleans",
+                "adm0name": "USA",
+                "adm1name": "Louisiance",
+                "note": [
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.062667,
+                    29.959404
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Washington",
+                "adm0name": "USA",
+                "adm1name": "DC",
+                "note": [
+                    "canada",
+                    "world"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.005567,
+                    38.898375
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "name": "Boston",
                 "adm0name": "USA",
                 "adm1name": "Massachusetts",
